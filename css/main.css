@@ -61,3 +61,17 @@ header > nav > div > *  { position: absolute; height: 20px; }
 @keyframes blink {
     50%{ border-color: transparent;}
 }
+/**Footer */
+footer > hr{
+    height: 2px;
+    margin: 1px;
+    padding: 1px;
+    background-color: red;
+}
+footer > div,p,a{
+    color: rgb(112, 109, 109);
+    font-size: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+
+}
