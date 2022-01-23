@@ -4,22 +4,22 @@
     margin: 0px;
 }
 body{
-    background-color: #3a3a3a;
+background-color: var(--background--one);
 }
 /*TODO variables */
 :root{
+    /**body */
+    --background--one:#304966; 
     /* * header */
     --space-nav: -2%;
     /* * footer */
 }
 
 /* ?Header */
-header{
-    background-color: rgb(169, 217, 243);
-    height: 4ch;
-}
+header{ background-color: rgb(169, 217, 243); height: 4ch; }
 header > nav > div > a > *{ height: 20px; margin: 5px;}
 header > nav > div > *  { position: absolute; height: 20px; }
+
 /* * Icons situation */
 #space{
     width: 2px;
@@ -27,12 +27,14 @@ header > nav > div > *  { position: absolute; height: 20px; }
     top: calc( calc(4ch - 3.25ch) / 2);
     height: 3.25ch;
 }
+
 .nav-div-space-list{ left: 2%;}
 .nav-div-space-social{ left: calc(94% - 2%); }
 .nav-div-youtube{ left: calc(94% - 1.5%);}
 .nav-div-twitter{ left: calc(96% - 1.5%);}
 .nav-div-twitch{ left: calc(98% - 1.5%);}
 .nav-div-github{ left: calc(100% - 1.5%); }
+
 /**Profile */
 .zonary123{
     margin-top: 10px; margin-top: 1vh;
@@ -47,6 +49,7 @@ header > nav > div > *  { position: absolute; height: 20px; }
     margin-top: 10px;
     background: #fff;
 } 
+
 /* ?Efecto maquina de escribir */
 .div-typing{
     display: flex;
