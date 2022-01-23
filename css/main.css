@@ -1,11 +1,13 @@
 * {
-    color: white;
+    color: black;
     padding: 0px;
     margin: 0px;
 }
 
 body {
     background-color: var(--background--one);
+    width: 100vw;
+    height: 100vh;
 }
 
 /*TODO variables */
@@ -21,6 +23,7 @@ body {
 header {
     background-color: rgb(169, 217, 243);
     height: 4ch;
+    width: 100vw;
 }
 
 header>nav>div>a>* {
@@ -58,10 +61,11 @@ header>nav>div>* {
     position: relative;
     float: left;
     margin: 4px;
+    background-color: rgb(169, 217, 243);
     padding: 4px;
 }
 #menu ul li:hover {
-    background: #5b78a7;
+    background: #2f589b;
 }
 
 #menu ul ul {
@@ -85,6 +89,9 @@ header>nav>div>* {
     display: block;
 }
 
+.fi-br-list{
+    color: black;
+}
 /* * Icons situation */
 #space {
     width: 2px;
@@ -120,7 +127,6 @@ header>nav>div>* {
 /**Profile */
 .zonary123 {
     margin-top: 10px;
-    margin-top: 1vh;
     display: flex;
     justify-content: center;
 }
@@ -147,11 +153,11 @@ header>nav>div>* {
     font-family: monospace;
     white-space: nowrap;
     border-right: 2px solid;
-    width: 21ch;
-    font-size: 24px;
+    width: 8.75ch;
+    font-size: 26px;
     font-weight: bold;
 
-    animation: typing 3s steps(24), blink 0.50s infinite step-end alternate;
+    animation: typing 3s steps(20), blink 0.50s infinite step-end alternate;
     overflow: hidden;
     color: rgb(95, 162, 187);
 }
@@ -167,19 +173,22 @@ header>nav>div>* {
         border-color: transparent;
     }
 }
-
-/**Footer */
-footer>hr {
-    height: 2px;
-    margin: 1px;
-    padding: 1px;
-    background-color: red;
+/**Cuerpo */
+.body{ margin-top: 1vh; margin-bottom: 99vh; }
+.biografia{
+    width: 80vw;
+    margin-left: 10vw;
+    background-color: rgb(59, 149, 209);
 }
-
+.body-space{
+/**Footer */
+footer{
+    background-color:#2f589b;
+}
 footer>div,p,a {
     color: rgb(112, 109, 109);
     font-size: 10px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
-
+    text-align: center;
 }
