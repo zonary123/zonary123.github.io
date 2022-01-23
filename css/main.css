@@ -4,7 +4,7 @@
     margin: 0px;
 }
 body{
-    background-color: #a06868;
+    background-color: #3a3a3a;
 }
 /*TODO variables */
 :root{
@@ -41,24 +41,29 @@ header > nav > div > *  { position: absolute; height: 20px; }
 }
 .caja > div > *{    color: aqua;}
 .caja-botones{
-    width: 7vw;
-    height: 23vh;
-    background-color:slategrey;
+    width: 7vw; height: 23vh;
+    background-color:rgb(71, 156, 242);
     padding: 1%;
     text-align: center;
 }
 .caja-botones > * > *{ font-size: 16px;}
+.caja-botones > .zonary123{
+    margin-top: 10px;
+}
 .caja-botones > .zonary123 > img {
-    width: 100px;
-    height: 100px;
+    width: 100px; height: 100px;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
     margin-top: 10px;
     background: #fff;
 } 
-.caja-botones > a{
-
+.caja-botones > .caja-a > a{
+    color: orange;
+    text-decoration: none;
+    background-color: aquamarine;
+    padding: 2px 2px;
+    border-radius: 30px;
 }
 /* ?Efecto maquina de escribir */
 .div-typing{
