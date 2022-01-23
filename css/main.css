@@ -60,6 +60,11 @@ header>nav>div>* {
     margin: 4px;
     padding: 4px;
 }
+<<<<<<< HEAD
+=======
+#list-nav{
+}
+>>>>>>> main
 #menu ul li:hover {
     background: #5b78a7;
 }
@@ -71,6 +76,12 @@ header>nav>div>* {
     left: 0;
     padding: 0;
 }
+<<<<<<< HEAD
+=======
+.li-list{
+    background-image: ;
+}
+>>>>>>> main
 #menu ul ul li {
     float: none;
     width: 150px
