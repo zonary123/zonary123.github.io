@@ -1,3 +1,64 @@
-h1{
-    color: red;
+*{
+    color: white;
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: #000000;
+}
+/*TODO variables */
+:root{
+    /* * header */
+    --space-nav: -2%;
+    /* * footer */
+}
+
+/* ?Header */
+header{
+    background-color: rgb(169, 217, 243);
+    height: 4ch;
+}
+header > nav > div > a > *{ height: 20px; margin: 5px;}
+header > nav > div > *  { position: absolute; height: 20px; }
+/* * Icons situation */
+#space{
+    width: 2px;
+    background-color: rgb(83, 124, 141);
+    top: calc( calc(4ch - 3.25ch) / 2);
+    height: 3.25ch;
+}
+.nav-div-list{}
+.nav-div-space-list{ left: 2%;}
+.nav-div-space-social{ left: calc(94% - 2%); }
+.nav-div-youtube{ left: calc(94% - 1.5%);}
+.nav-div-twitter{ left: calc(96% - 1.5%);}
+.nav-div-twitch{ left: calc(98% - 1.5%);}
+.nav-div-github{ left: calc(100% - 1.5%); }
+
+/* ?Efecto maquina de escribir */
+.div-typing{
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+}
+.typing{
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 2px solid;
+    width: 21ch;
+    font-size: 24px;
+    font-weight: bold;
+
+    animation: typing 3s steps(24),blink 0.50s infinite step-end alternate;
+    overflow: hidden;
+    color: rgb(95, 162, 187);
+}
+
+@keyframes typing {
+    from { width: 0;}
+}
+
+@keyframes blink {
+    50%{ border-color: transparent;}
 }
