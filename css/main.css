@@ -4,7 +4,7 @@
     margin: 0px;
 }
 body{
-    background-color: #000000;
+    background-color: #a06868;
 }
 /*TODO variables */
 :root{
@@ -33,7 +33,33 @@ header > nav > div > *  { position: absolute; height: 20px; }
 .nav-div-twitter{ left: calc(96% - 1.5%);}
 .nav-div-twitch{ left: calc(98% - 1.5%);}
 .nav-div-github{ left: calc(100% - 1.5%); }
+/**Profile */
+.caja{
+    margin-top: 1vh;
+    display: flex;
+    justify-content: center;
+}
+.caja > div > *{    color: aqua;}
+.caja-botones{
+    width: 7vw;
+    height: 23vh;
+    background-color:slategrey;
+    padding: 1%;
+    text-align: center;
+}
+.caja-botones > * > *{ font-size: 16px;}
+.caja-botones > .zonary123 > img {
+    width: 100px;
+    height: 100px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    margin-top: 10px;
+    background: #fff;
+} 
+.caja-botones > a{
 
+}
 /* ?Efecto maquina de escribir */
 .div-typing{
     display: flex;
@@ -45,7 +71,7 @@ header > nav > div > *  { position: absolute; height: 20px; }
     font-family: monospace;
     white-space: nowrap;
     border-right: 2px solid;
-    width: 23ch;
+    width: 21ch;
     font-size: 24px;
     font-weight: bold;
 
