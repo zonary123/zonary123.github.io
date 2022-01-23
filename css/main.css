@@ -34,23 +34,12 @@ header > nav > div > *  { position: absolute; height: 20px; }
 .nav-div-twitch{ left: calc(98% - 1.5%);}
 .nav-div-github{ left: calc(100% - 1.5%); }
 /**Profile */
-.caja{
-    margin-top: 1vh;
+.zonary123{
+    margin-top: 10px; margin-top: 1vh;
     display: flex;
     justify-content: center;
 }
-.caja > div > *{    color: aqua;}
-.caja-botones{
-    width: 7vw; height: 23vh;
-    background-color:rgb(71, 156, 242);
-    padding: 1%;
-    text-align: center;
-}
-.caja-botones > * > *{ font-size: 16px;}
-.caja-botones > .zonary123{
-    margin-top: 10px;
-}
-.caja-botones > .zonary123 > img {
+.zonary123 > img {
     width: 100px; height: 100px;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -58,18 +47,11 @@ header > nav > div > *  { position: absolute; height: 20px; }
     margin-top: 10px;
     background: #fff;
 } 
-.caja-botones > .caja-a > a{
-    color: orange;
-    text-decoration: none;
-    background-color: aquamarine;
-    padding: 2px 2px;
-    border-radius: 30px;
-}
 /* ?Efecto maquina de escribir */
 .div-typing{
     display: flex;
     justify-content: center;
-    margin-top: 2vh;
+    margin-top: 1vh;
 }
 .typing{
     display: block;
