@@ -130,10 +130,18 @@ header>nav>div>* {
     display: flex;
     justify-content: center;
 }
+.zonary123 > .borde{
+    background-color: rgb(164, 199, 237);
 
-.zonary123>img {
+    width: 102px;
+    height: 102px;
+    border-radius: 100%;
+    margin-top: 9px;
+}
+.zonary123 > img {
     width: 100px;
     height: 100px;
+    position: absolute;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
