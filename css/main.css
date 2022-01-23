@@ -27,7 +27,6 @@ header > nav > div > *  { position: absolute; height: 20px; }
     top: calc( calc(4ch - 3.25ch) / 2);
     height: 3.25ch;
 }
-.nav-div-list{}
 .nav-div-space-list{ left: 2%;}
 .nav-div-space-social{ left: calc(94% - 2%); }
 .nav-div-youtube{ left: calc(94% - 1.5%);}
