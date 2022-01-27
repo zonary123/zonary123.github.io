@@ -35,7 +35,12 @@ header>nav>div>* {
     position: absolute;
     height: 20px;
 }
-
+header>nav>div>div>a{
+    position: absolute;
+    height: 20px;
+    margin: 6px;
+    left: 5ch;
+}
 /*!Menu desplegable */
 
 
@@ -189,7 +194,10 @@ header>nav>div>* {
     background-color: rgb(59, 149, 209);
 }
 .body-space{
+
+}
 /**Footer */
+
 footer{
     background-color:#2f589b;
 }
@@ -199,4 +207,32 @@ footer>div,p,a {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
     text-align: center;
+}
+/**Tablas */
+table{
+    background-color:#2f589b;
+    border: rgb(32, 32, 32) solid 1px;
+    margin: 2px 0px 25px 44%;
+}
+table,tr,td,th{
+    width: auto;
+    text-align: center;
+    border-collapse: collapse;
+    border: rgb(66, 129, 165) 1px solid;
+}
+td,tr,th{
+    width: auto;
+    padding: 2px 5px 2px 5px;
+}
+.page-services{
+    text-align: center;
+    color: white;
+    text-decoration: rgb(77, 120, 161) underline;
+    margin: 1px;
+}
+.service{
+    color: aquamarine;
+}
+.link-service > a{
+    color:rgb(54, 140, 211);
 }
