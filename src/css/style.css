@@ -1,0 +1,59 @@
+/* css */
+:root {
+    --body-bg: #ffffff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p{
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    background: var(--body-bg);
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    background: #2f2f41;
+    position: sticky;
+    top: 0px;
+}
+/* ? Logo */
+img.logo {
+    height: 46px;
+    width: 46px;
+    margin-right: var(--logo-margin); margin-left: var(--logo-margin);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    top: 0;
+    border-radius: 50%;
+}
+
+button{
+    border-radius: 4px;
+}
+/* main */
+main{
+    display: flex;
+}
+main > div{
+    border-radius: 10px;
+    align-items: center;
+}
+main > div > img{
+    border-radius: 50%;
+}
+p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

@@ -1,88 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zonary123</title>
-    <link rel="stylesheet" href="./css/main.css">
-    <script src="./js/main.js"></script>
-    
-    <!-- * icons SVG -->
-    <link rel="stylesheet" href="./src/icons/svg/uicons-bold-rounded/css/uicons-bold-rounded.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/botones/switch-sun-moon.css">
+    <link rel="stylesheet" href="./src/css/botones/header-menu.css">
+    <link rel="stylesheet" href="./dist/output.css">
+    <link rel="stylesheet" href="./src/input.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
-<body>
-    <!--
-    ?Header
-    -->
-
+<body class="bg-gray-800">
     <header>
-        <nav>
-
-            <div class="header-nav-left">
-                <nav id="menu">
-                    <ul>
-                        <li>
-                            <div class="icon-holder" id="list-nav">
-                                <i class="fi-br-list"></i>
-                            </div>
-                            <ul>
-                                <li><a href="#">Enlace 2.1</a></li>
-                                <li><a href="#">Enlace 2.2</a></li>
-                                <li><a href="#">Enlace 2.3</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <!--
-                <img class="nav-div-list" src="./src/icons/svg/uicons-bold-rounded/svg/fi-br-list.svg" alt=""
-                    style="margin: 5px;">
-            -->
-                <span id="space" class="nav-div-space-list"></span>
-                <span id="space" class="nav-div-space-social"></span>
-                <a class="nav-div-youtube" href=""><img src="./src/img/socials/youtube.png" alt=""></a>
-                <a class="nav-div-twitter" href="https://twitter.com/zonary1232"><img src="./src/img/socials/gorjeo.png"
-                        alt=""></a>
-                <a class="nav-div-twitch" href="https://www.twitch.tv/zonary123"><img
-                        src="./src/img/socials/contraccion-nerviosa.png" alt=""></a>
-                <a class="nav-div-github" href="https://github.com/zonary123?tab=repositories"><img
-                        src="./src/img/socials/github.png" alt="" style="margin:5px;" id="icon"></a>
-                <div class="header-nav-right">
-
-                </div>
-        </nav>
-    </header>
-    <div class="zonary123">
-        <div class="borde">
-        </div>
-            <img src="./src/img/profile/zonary123.jpg" alt="" width="24px">
-    </div>
-    <div class="div-typing">
-        <span class="typing">Zonary123</span>
-    </div>
-    <!--
-        ? Cuerpo
+            <div class="menu flex justify-between items-center">
+                <!--logo-->
+                <img class="logo" src="./src/img/zonary123.jpg" alt="">
+                <ul>
+                    <li class="bg-gradient-to-r bg-[#2f2f41] hover:from-pink-500 hover:to-yellow-500"><a href="#">Abaut me</a></li>
+                    <li class="bg-gradient-to-r bg-[#2f2f41] hover:from-pink-500 hover:to-yellow-500"><a href="./pages/programacion.html">Programacion</a></li>
+                    <li class="bg-gradient-to-r bg-[#2f2f41] hover:from-pink-500 hover:to-yellow-500"><a href="./pages/contacto.html">Contacto</a></li>
+                </ul>
+                
+                <!--boton denoche y dia -->
+                <label for="sonmoon" class="switch">
+                    <input type="checkbox" value="yes" id="sonmoon" name="sonmoon" class="sonmoon">
+                    <span class="slider" id="sonmoon" name="sonmoon" class="sonmoon"></span>
+                </label>
+                <script src="./index.js"></script>
+            </div>
+            <!--
+            <button type="button" onclick="setTheme()">aaaa</button>
     -->
-    <div class="body">
-        <div class="biografia">
-            <p></p>
+    </header>
+    <main class=" grid gap-16 grid-cols-3 grid-rows-1 m-32">
+        <div></div>
+        <div class=" border-y-indigo-400 bg-indigo-400 shadow-md shadow-indigo-600 w-64 m-auto">
+            <img src="./src/img/zonary123.jpg" alt="" class="w-64 h-64 inline-block align-middle p-2 ">
+            <h1 class="text-4xl text-center mb-4 font-mono text-cyan-400">Zonary123</h1>
+            <p class="text-center text-12xl ml-3 pb-2 font-custom1">Soy una persona que le gusta la informatica y le encantaria poder aprender a programar.</p>
         </div>
-    </div>
-    <div class="body-space">
-
-    </div>
-    <!--
-    ?Footer
--->
-    <footer>
-        <p style="color: white;">copyright</p>
-        <div class="copyright">
-            <p><a href="https://www.flaticon.es/iconos-gratis/gorjeo" title="gorjeo iconos">Gorjeo iconos creados por
-                    Pixel perfect - Flaticon</a></p>
-        </div>
-    </footer>
+    </main>
 </body>
-
 </html>
