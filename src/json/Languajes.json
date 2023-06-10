@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Java",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Java_logo_and_wordmark.svg/1200px-Java_logo_and_wordmark.svg.png",
+    "color": "shadow-orange-400/50"
+  },
+  {
+    "id": 2,
+    "name": "SQL",
+    "img": "https://www.freepnglogos.com/uploads/logo-mysql-png/logo-mysql-part-azure-sql-database-with-azure-active-directory-17.png",
+    "color": "shadow-blue-500"
+  }
+]
