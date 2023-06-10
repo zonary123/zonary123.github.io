@@ -11,13 +11,13 @@ import {
 function Contacto () {
   return (
     <div className='flex items-center justify-center h-screen dark:bg-[#282c34]'>
-      <div className='dark:bg-[#2f333b] p-12 rounded-lg shadow-lg shadow-red-500 '>
+      <div className='dark:bg-[#2f333b] p-12 rounded-lg shadow-lg shadow-red-500 justify-center '>
         <div className='container mx-auto text-white'>
-          <h1 className='text-3xl font-bold mt-4 mb-8 justify-center text-center'>
+          <h1 className='text-4xl font-bold mt-4 mb-8 justify-center text-center p-2 rounded-xl'>
             Contacto
           </h1>
           <div className='flex flex-col space-y-4'>
-            <div className='flex items-center'>
+            <div className='flex items-center justify-center'>
               <FiMail className='mr-2 text-red-500' />
               <a
                 href='mailto:carlosvarasalonso10@gmail.com'
@@ -26,11 +26,11 @@ function Contacto () {
                 carlosvarasalonso10@gmail.com
               </a>
             </div>
-            <div className='flex items-center'>
-              <FiPhone className='mr-2 text-red-500' />
+            <div className='flex items-center justify-center'>
+              <FiPhone className='mr-2 text-red-500 ' />
               <a
                 href='tel:+34 616 04 46 83'
-                className='text-blue-500 hover:underline'
+                className='text-blue-500 hover:underline '
               >
                 +34 616 04 46 83
               </a>
@@ -47,7 +47,7 @@ function Contacto () {
                     rel='noopener noreferrer'
                     className='text-blue-500 hover:underline'
                   >
-                    <FiFacebook className='text-blue-500' />
+                    <FiFacebook className='text-[#5474b9] hover:scale-110 hover:animate-pulse transition duration-500 ease-in-out w-6 h-6' />
                   </a>
                 </li>
                 <li>
@@ -57,7 +57,7 @@ function Contacto () {
                     rel='noopener noreferrer'
                     className='text-blue-500 hover:underline'
                   >
-                    <FiTwitter className='text-blue-500' />
+                    <FiTwitter className='text-[#1DA1F2] hover:scale-110 hover:animate-pulse transition duration-500 ease-in-out w-6 h-6' />
                   </a>
                 </li>
                 <li>
@@ -65,9 +65,9 @@ function Contacto () {
                     href='https://www.instagram.com/tuusuario'
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='text-blue-500 hover:underline'
+                    className='text-blue-500 hover:underline '
                   >
-                    <FiInstagram className='text-purple-500' />
+                    <FiInstagram className='text-[#9a61c0] hover:scale-110 hover:animate-pulse transition duration-500 ease-in-out w-6 h-6' />
                   </a>
                 </li>
                 {/* <li>

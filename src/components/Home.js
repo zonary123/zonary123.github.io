@@ -34,8 +34,8 @@ function Home () {
             </div>
           </div>
         </section>
-        <section className='Informacion'>
-          <div className='Lenguajes  my-8 flex flex-col items-center'>
+        <section className='Informacion mb-[5em]'>
+          <div className='Lenguajes flex flex-col items-center'>
             <h2 className='text-2xl md:text-3xl font-bold text-center my-8'>
               Lenguajes
             </h2>
@@ -60,10 +60,10 @@ function Home () {
               )}
             </div>
             <div className='Frameworks '>
-              <h2 className='text-2xl md:text-3xl font-bold text-center my-8'>
+              <h2 className='text-2xl md:text-3xl font-bold text-center my-16'>
                 Frameworks
               </h2>
-              <div className='lista_frameworks grid gap-10 grid-cols h-[15em] my-4'>
+              <div className='lista_frameworks grid gap-10 h-[15em] my-4'>
                 {frameworks.map(frameworks =>
                   <div className={lenguaje_class + ' ' + frameworks.color}>
                     <img
