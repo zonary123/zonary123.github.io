@@ -20,19 +20,19 @@ function Contacto () {
             <div className='flex items-center'>
               <FiMail className='mr-2 text-red-500' />
               <a
-                href='mailto:tuemail@example.com'
+                href='mailto:carlosvarasalonso10@gmail.com'
                 className='text-blue-500 hover:underline'
               >
-                tuemail@example.com
+                carlosvarasalonso10@gmail.com
               </a>
             </div>
             <div className='flex items-center'>
               <FiPhone className='mr-2 text-red-500' />
               <a
-                href='tel:+123456789'
+                href='tel:+34 616 04 46 83'
                 className='text-blue-500 hover:underline'
               >
-                +123456789
+                +34 616 04 46 83
               </a>
             </div>
             <div className='grid gap-2'>
@@ -70,7 +70,7 @@ function Contacto () {
                     <FiInstagram className='text-purple-500' />
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a
                     href='https://www.github.com/tuusuario'
                     target='_blank'
@@ -79,12 +79,12 @@ function Contacto () {
                   >
                     <FiGithub className='text-gray-500' />
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
           <div className='flex justify-center'>
-            <button className='mt-8 text-blue-500  text-center p-2 bg-blue-500 text-white rounded-md hover:animate-pulse transition duration-500 ease-in-out'>
+            <button className='mt-8 text-white font-bold text-center p-2 bg-blue-500 text-white rounded-md hover:animate-pulse transition duration-500 ease-in-out'>
               Volver
             </button>
           </div>
