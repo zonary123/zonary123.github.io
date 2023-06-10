@@ -37,7 +37,7 @@ function Home () {
           </h2>
           <div className='lista_lenguajes grid gap-10 grid-cols-2 h-[15em]'>
             {lenguajes.map(lenguaje =>
-              <div className={lenguaje_class + lenguaje.color}>
+              <div className={lenguaje_class + ' ' + lenguaje.color}>
                 <img
                   src={lenguaje.img}
                   alt={lenguaje.name}
