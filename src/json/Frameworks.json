@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "name": "React",
+    "img": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    "color": " shadow-[#61dafb]",
+    "background": " bg-[#61dafb]"
+  }
+]
