@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Visual studio ",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Visual_Studio_Icon_2019.svg/1200px-Visual_Studio_Icon_2019.svg.png",
+    "color": " shadow-[#cd97f9]",
+    "background": " bg-[#cd97f9]"
+  },
+  {
+    "id": 2,
+    "name": "Visual studio Code",
+    "img": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+    "color": " shadow-[#23a9f2]",
+    "background": " bg-[#23a9f2]"
+  },
+  {
+    "id": 3,
+    "name": "IntelliJ IDEA",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/1200px-IntelliJ_IDEA_Icon.svg.png",
+    "color": " shadow-[#f73060]",
+    "background": " bg-[#f73060]"
+  },
+  {
+    "id": 4,
+    "name": "Powershell",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/a/af/PowerShell_Core_6.0_icon.png",
+    "color": " shadow-[#253952]",
+    "background": " bg-[#253952]"
+  },
+  {
+    "id": 5,
+    "name": "Bash",
+    "img": "https://bashlogo.com/img/symbol/png/full_colored_light.png",
+    "color": " shadow-[#489c25]",
+    "background": " bg-[#489c25]"
+  },
+  {
+    "id": 6,
+    "name": "Git",
+    "img": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+    "color": " shadow-[#f05032]",
+    "background": " bg-[#f05032]"
+  }
+]

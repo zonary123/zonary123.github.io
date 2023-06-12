@@ -7,7 +7,7 @@ import {
   FiInstagram,
   FiGithub
 } from 'react-icons/fi'
-
+import { BsDiscord } from 'react-icons/bs'
 function Contacto () {
   return (
     <div className='flex items-center justify-center h-screen dark:bg-[#282c34]'>
@@ -52,7 +52,7 @@ function Contacto () {
                 </li>
                 <li>
                   <a
-                    href='https://www.twitter.com/tuusuario'
+                    href='https://twitter.com/zonary1232'
                     target='_blank'
                     rel='noopener noreferrer'
                     className='text-blue-500 hover:underline'
@@ -62,7 +62,7 @@ function Contacto () {
                 </li>
                 <li>
                   <a
-                    href='https://www.instagram.com/tuusuario'
+                    href='https://www.instagram.com/zonary123/'
                     target='_blank'
                     rel='noopener noreferrer'
                     className='text-blue-500 hover:underline '
@@ -70,9 +70,19 @@ function Contacto () {
                     <FiInstagram className='text-[#9a61c0] hover:scale-110 hover:animate-pulse transition duration-500 ease-in-out w-6 h-6' />
                   </a>
                 </li>
+                <li>
+                  <a
+                    href='https://discord.com/invite/FxM6YZWnTB'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='text-blue-500 hover:underline'
+                  >
+                    <BsDiscord className='text-[#5b65f1] hover:scale-110 hover:animate-pulse transition duration-500 ease-in-out w-6 h-6' />
+                  </a>
+                </li>
                 {/* <li>
                   <a
-                    href='https://www.github.com/tuusuario'
+                    href='https://github.com/zonary123'
                     target='_blank'
                     rel='noopener noreferrer'
                     className='text-blue-500 hover:underline'

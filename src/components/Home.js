@@ -1,6 +1,7 @@
 import React from 'react'
 import lenguajes from '../json/Languajes.json'
 import frameworks from '../json/Frameworks.json'
+import herramientas from '../json/Herramientas.json'
 import Footer from './Footer'
 
 function Home () {
@@ -35,13 +36,16 @@ function Home () {
           </div>
         </section>
         <section className='Informacion mb-[5em]'>
-          <div className='Lenguajes flex flex-col items-center'>
+          <article className='Lenguajes flex flex-col items-center'>
             <h2 className='text-2xl md:text-3xl font-bold text-center my-8'>
               Lenguajes
             </h2>
-            <div className='lista_frameworks grid gap-10 grid-cols-3 h-[15em] my-4 '>
-              {lenguajes.map(lenguaje =>
-                <div className={lenguaje_class + ' ' + lenguaje.color}>
+            <div className='lista_frameworks grid gap-10 grid-cols-3 justify-center h-full my-4'>
+              {lenguajes.map((lenguaje, index) =>
+                <div
+                  key={index}
+                  className={lenguaje_class + ' ' + lenguaje.color}
+                >
                   <img
                     src={lenguaje.img}
                     alt={lenguaje.name}
@@ -49,9 +53,9 @@ function Home () {
                   />
                   <p
                     className={
-                      'nombre my-8 p-2 rounded-md font-bold text-lg text-white' +
+                      'nombre my-8 p-2 rounded-md font-bold text-center text-lg text-white' +
                       ' ' +
-                      String.toString(lenguaje.background)
+                      String(lenguaje.background)
                     }
                   >
                     {lenguaje.name}
@@ -59,32 +63,70 @@ function Home () {
                 </div>
               )}
             </div>
-            <div className='Frameworks '>
-              <h2 className='text-2xl md:text-3xl font-bold text-center my-16'>
-                Frameworks
-              </h2>
-              <div className='lista_frameworks grid gap-10 h-[15em] my-4'>
-                {frameworks.map(frameworks =>
-                  <div className={lenguaje_class + ' ' + frameworks.color}>
-                    <img
-                      src={frameworks.img}
-                      alt={frameworks.name}
-                      className='logo w-32 h-32'
-                    />
-                    <p
-                      className={
-                        'nombre my-8 p-2 rounded-md font-bold text-lg text-white' +
-                        ' ' +
-                        String.toString(frameworks.background)
-                      }
-                    >
-                      {frameworks.name}
-                    </p>
-                  </div>
-                )}
-              </div>
+          </article>
+          <article className='Frameworks'>
+            <h2 className='text-2xl md:text-3xl font-bold text-center my-16'>
+              Frameworks
+            </h2>
+            <div className='lista_frameworks grid gap-10 justify-center h-full my-4'>
+              {frameworks.map((framework, index) =>
+                <div
+                  key={index}
+                  className={lenguaje_class + ' ' + framework.color}
+                >
+                  <img
+                    src={framework.img}
+                    alt={framework.name}
+                    className='logo w-32 h-32'
+                  />
+                  <p
+                    className={
+                      'nombre my-8 p-2 rounded-md font-bold text-center text-lg text-white' +
+                      ' ' +
+                      String(framework.background)
+                    }
+                  >
+                    {framework.name}
+                  </p>
+                </div>
+              )}
             </div>
-          </div>
+          </article>
+          <article className='Herramientas'>
+            <h2 className='text-2xl md:text-3xl font-bold text-center my-16'>
+              Herramientas
+            </h2>
+            <div className='lista_herramientas grid grid-cols-3 gap-10 justify-center h-full my-4'>
+              {herramientas.map((herramienta, index) =>
+                <div
+                  key={index}
+                  className={lenguaje_class + ' ' + herramienta.color}
+                >
+                  <img
+                    src={herramienta.img}
+                    alt={herramienta.name}
+                    className='logo w-32 h-32'
+                  />
+                  <p
+                    className={
+                      'nombre my-8 p-2 rounded-md font-bold text-lg text-center text-white' +
+                      ' ' +
+                      String(herramienta.background)
+                    }
+                  >
+                    {herramienta.name}
+                  </p>
+                </div>
+              )}
+            </div>
+          </article>
+          <article className='Proyectos'>
+            <h2 className='text-2xl md:text-3xl font-bold text-center my-16 invisible'>
+              Proyectos
+            </h2>
+            <div className='lista_proyectos grid grid-cols-3 gap-10 justify-center h-full my-4'>
+            </div>
+          </article>
         </section>
       </main>
       <Footer />
