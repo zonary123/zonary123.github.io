@@ -43,13 +43,18 @@ export const Navbar = () => {
           <a href="#" className="font-bold text-2xl text-gradient tracking-tighter hover:scale-105 transition-transform">zonary123</a>
         
           <div className="hidden md:flex items-center space-x-8">
-            <div className="flex space-x-6">
+            <div className="flex items-center space-x-6">
               {navLinks.map((link) => (
-                <a key={link.name} href={link.href} className="text-sm font-medium hover:text-primary-500 transition-colors">
+                <a 
+                  key={link.name} 
+                  href={link.href} 
+                  className="text-sm font-medium hover:text-primary-500 transition-colors leading-none py-1"
+                >
                   {link.name}
                 </a>
               ))}
             </div>
+
             
             <div className="flex items-center space-x-4 border-l border-slate-300 dark:border-slate-700 pl-4">
               <button onClick={toggleLanguage} className="p-2 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-full transition-colors" aria-label="Toggle Language">
