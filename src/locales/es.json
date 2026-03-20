@@ -24,7 +24,13 @@
     "description1": "Soy un desarrollador Full Stack con un fuerte enfoque en backend, especializado en crear sistemas eficientes, optimizados y escalables.",
     "description2": "Me adapto fácilmente a cualquier parte del stack, desde backend hasta frontend, y me siento cómodo enfrentándome a nuevos retos técnicos. Disfruto automatizando procesos, mejorando el rendimiento de aplicaciones y encontrando soluciones a problemas complejos.",
     "description3": "Gran parte de mi experiencia proviene del desarrollo de sistemas para entornos exigentes como Minecraft, donde he trabajado con programación asíncrona, bases de datos y optimización en contextos single-thread.",
-    "description4": "Mi objetivo es seguir creciendo como desarrollador, aprendiendo constantemente y construyendo soluciones cada vez más sólidas."
+    "description4": "Mi objetivo es seguir creciendo como desarrollador, aprendiendo constantemente y construyendo soluciones cada vez más sólidas.",
+    "card_backend_title": "Arquitectura Backend",
+    "card_backend_desc": "Diseño de sistemas robustos y eficientes para entornos de alta exigencia.",
+    "card_performance_title": "Enfoque en Rendimiento",
+    "card_performance_desc": "Optimización en single-thread y manejo de asincronía avanzada.",
+    "card_fullstack_title": "Flexibilidad Full Stack",
+    "card_fullstack_desc": "Capacidad para integrarse end-to-end con fluidez en todo el stack."
   },
   "formation": {
     "title": "Formación Académica",
@@ -81,8 +87,13 @@
     "backend": "Backend y Core",
     "frontend": "Frontend",
     "databases": "Bases de Datos",
-    "tools": "Herramientas y Entonos",
+    "tools": "Herramientas y Entornos",
     "specialties": "Especialidades",
+    "specialty_items": {
+      "async": "Programación Asíncrona",
+      "performance": "Optimización de Rendimiento",
+      "concurrent": "Sistemas Concurrentes"
+    },
     "descriptions": {
       "HTML": "Lenguaje de marcado para estructurar páginas web.",
       "CSS": "Lenguaje para dar estilo y diseño a páginas web.",
@@ -107,7 +118,9 @@
       "Windows": "Sistema operativo desarrollado por Microsoft.",
       "Unity": "Motor de desarrollo de videojuegos multiplataforma.",
       "Minecraft": "Videojuego de construcción y exploración en mundo abierto.",
-      "Minecraft API": "Herramientas para interactuar programáticamente con Minecraft."
+      "Minecraft API": "Herramientas para interactuar programáticamente con Minecraft.",
+      "Interactive Development": "Creación de experiencias interactivas y dinámicas.",
+      "IT Support": "Asistencia técnica y mantenimiento de sistemas informáticos."
     }
   },
   "projects": {
@@ -121,7 +134,21 @@
       "experiments": "Experimentos"
     },
     "view_source": "Ver Código",
-    "view_demo": "Demo"
+    "view_demo": "Demo",
+    "items": {
+      "cobblemonpatches": {
+        "description": "Mod que corrige errores y mejora el rendimiento de Cobblemon."
+      },
+      "ultrautils": {
+        "description": "Librería core con utilidades compartidas para mis mods de Minecraft."
+      },
+      "wondertrade": {
+        "description": "Un mod para intercambiar Pokémon con otros jugadores de forma aleatoria."
+      },
+      "ultrabattlepass": {
+        "description": "Un mod que implementa un sistema de Battle Pass típico de juegos como Fortnite o Apex Legends."
+      }
+    }
   },
   "experience": {
     "title": "Experiencia Técnica",
@@ -133,7 +160,13 @@
       "Diseño sistemas eficientes y escalables"
     ],
     "approach_title": "Mi Enfoque",
-    "approach": "Trabajo habitualmente con programación asíncrona y diseño de sistemas eficientes."
+    "approach": "Trabajo habitualmente con programación asíncrona y diseño de sistemas eficientes.",
+    "tags": {
+      "optimization": "Optimización",
+      "scalability": "Escalabilidad",
+      "async": "Asincronía",
+      "architecture": "Arquitectura"
+    }
   },
   "contact": {
     "title": "¿Hablamos?",

@@ -8,7 +8,7 @@
     "workExperience": "Work Experience",
     "skills": "Skills",
     "projects": "Projects",
-    "experience": "Technical Exp",
+    "experience": "Experience",
     "certificates": "Certificates",
     "contact": "Contact"
   },
@@ -22,9 +22,15 @@
   "about": {
     "title": "About Me",
     "description1": "I am a Full Stack developer with a strong focus on the backend, specialized in creating efficient, optimized, and scalable systems.",
-    "description2": "I adapt easily to any part of the stack, from backend to frontend, and I feel comfortable facing new technical challenges.",
-    "description3": "Much of my experience comes from developing systems for demanding environments like Minecraft.",
-    "description4": "My goal is to keep growing as a developer, constantly learning and building increasingly robust solutions."
+    "description2": "I adapt easily to any part of the stack, from backend to frontend, and I feel comfortable facing new technical challenges. I enjoy automating processes, improving application performance, and finding solutions to complex problems.",
+    "description3": "Much of my experience comes from developing systems for demanding environments like Minecraft, where I have worked with asynchronous programming, databases, and single-threaded optimization.",
+    "description4": "My goal is to keep growing as a developer, constantly learning and building increasingly robust solutions.",
+    "card_backend_title": "Backend Architecture",
+    "card_backend_desc": "Design of robust and efficient systems for high-demand environments.",
+    "card_performance_title": "Performance Focus",
+    "card_performance_desc": "Single-thread optimization and advanced asynchrony management.",
+    "card_fullstack_title": "Full Stack Flexibility",
+    "card_fullstack_desc": "Ability to integrate end-to-end smoothly across the entire stack."
   },
   "formation": {
     "title": "Education",
@@ -83,6 +89,11 @@
     "databases": "Databases",
     "tools": "Tools & Environments",
     "specialties": "Specialties",
+    "specialty_items": {
+      "async": "Asynchronous Programming",
+      "performance": "Performance Optimization",
+      "concurrent": "Concurrent Systems"
+    },
     "descriptions": {
       "HTML": "Markup language for structuring web pages.",
       "CSS": "Language for styling and designing web pages.",
@@ -107,7 +118,9 @@
       "Windows": "Operating system developed by Microsoft.",
       "Unity": "Cross-platform video game development engine.",
       "Minecraft": "Open-world construction and exploration video game.",
-      "Minecraft API": "Tools to interact programmatically with Minecraft."
+      "Minecraft API": "Tools to interact programmatically with Minecraft.",
+      "Interactive Development": "Creating interactive and dynamic experiences.",
+      "IT Support": "Technical assistance and maintenance of computer systems."
     }
   },
   "projects": {
@@ -121,19 +134,39 @@
       "experiments": "Experiments"
     },
     "view_source": "Source",
-    "view_demo": "Demo"
+    "view_demo": "Demo",
+    "items": {
+      "cobblemonpatches": {
+        "description": "Mod that fixes bugs and improves performance for Cobblemon."
+      },
+      "ultrautils": {
+        "description": "Core library with shared utilities for my Minecraft mods."
+      },
+      "wondertrade": {
+        "description": "A mod to trade Pokémon with other players randomly."
+      },
+      "ultrabattlepass": {
+        "description": "A mod that implements a Battle Pass system typical of games like Fortnite or Apex Legends."
+      }
+    }
   },
   "experience": {
     "title": "Technical Experience",
     "description": "I have developed multiple Minecraft mods (especially with Cobblemon):",
     "bullets": [
-      "Implement systems with databases (MongoDB, Redis)",
-      "Use asynchronous programming to reduce load",
-      "Optimize performance in single-thread environments",
-      "Design efficient systems"
+      "Implement database-driven systems (MongoDB, Redis)",
+      "Leverage asynchronous programming to reduce main-thread load",
+      "Optimize performance in single-threaded environments like Minecraft",
+      "Design efficient, scalable architectures"
     ],
     "approach_title": "My Approach",
-    "approach": "I regularly work with asynchronous programming and efficient system design."
+    "approach": "I regularly work with asynchronous programming and efficient system design.",
+    "tags": {
+      "optimization": "Optimization",
+      "scalability": "Scalability",
+      "async": "Asynchrony",
+      "architecture": "Architecture"
+    }
   },
   "contact": {
     "title": "Let's Talk!",

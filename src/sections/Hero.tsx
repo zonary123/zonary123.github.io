@@ -1,8 +1,9 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Github, Mail, ArrowRight, User } from 'lucide-react';
+import { Github, Mail, ArrowRight } from 'lucide-react';
 import profileImage from '../assets/profile.webp';
+import { PERSONAL } from '../data/constants';
 
 export const Hero = () => {
   const { t } = useTranslation();
@@ -19,9 +20,9 @@ export const Hero = () => {
           >
             <h2 className="text-xl md:text-2xl font-medium text-primary-500 mb-2">{t('hero.greeting')}</h2>
             <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4">
-              <span className="text-slate-900 dark:text-white">Carlos Varas Alonso</span>
+              <span className="text-slate-900 dark:text-white">{PERSONAL.name}</span>
               <br />
-              <span className="text-gradient">zonary123</span>
+              <span className="text-gradient">{PERSONAL.alias}</span>
             </h1>
             <h3 className="text-2xl md:text-3xl font-semibold text-slate-700 dark:text-slate-300">
               {t('hero.role')}
@@ -46,7 +47,7 @@ export const Hero = () => {
             <a href="#projects" className="px-8 py-3 rounded-full bg-gradient-to-r from-primary-500 to-accent-500 text-white font-medium hover:opacity-90 transition-opacity flex items-center gap-2 shadow-lg shadow-primary-500/25">
               {t('hero.cta_projects')} <ArrowRight size={18} />
             </a>
-            <a href="https://github.com/zonary123" target="_blank" rel="noopener noreferrer" className="px-8 py-3 rounded-full glass glass-hover font-medium flex items-center gap-2 text-slate-700 dark:text-slate-300">
+            <a href={PERSONAL.github} target="_blank" rel="noopener noreferrer" className="px-8 py-3 rounded-full glass glass-hover font-medium flex items-center gap-2 text-slate-700 dark:text-slate-300">
               <Github size={20} /> GitHub
             </a>
             <a href="#contact" className="px-8 py-3 rounded-full glass glass-hover font-medium flex items-center gap-2 text-slate-700 dark:text-slate-300">
@@ -64,8 +65,7 @@ export const Hero = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 dark:from-primary-600 dark:to-accent-600 rounded-full blur-[80px] opacity-20 group-hover:opacity-40 transition-opacity duration-700 mix-blend-multiply dark:mix-blend-screen" />
           
           <div className="relative w-56 h-56 md:w-80 md:h-80 rounded-full border-4 border-white/20 dark:border-white/10 glass shadow-2xl shadow-primary-500/10 overflow-hidden flex flex-col items-center justify-center bg-slate-100 dark:bg-dark-800">
-
-            <img src={profileImage} alt="Carlos Varas Alonso" className="w-full h-full object-cover" />
+            <img src={profileImage} alt={PERSONAL.name} className="w-full h-full object-cover" />
           </div>
           <div className="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-accent-500/20 backdrop-blur-md border border-white/20 animate-pulse" />
           <div className="absolute -bottom-6 -left-6 w-20 h-20 rounded-full bg-primary-500/20 backdrop-blur-md border border-white/20 animate-pulse" style={{ animationDelay: '1s' }} />

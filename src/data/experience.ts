@@ -7,6 +7,7 @@ export interface ExperienceItem {
   descriptionKey: string;
   technologies: string[];
   iconName: string;
+  glowColor: string;
 }
 
 export const workExperienceData: ExperienceItem[] = [
@@ -17,8 +18,9 @@ export const workExperienceData: ExperienceItem[] = [
     startYear: 'Mar 2024',
     endYear: 'Jun 2024',
     descriptionKey: 'workExperience.items.air_institute.description',
-    technologies: ['Unity', 'C#', 'Desarrollo Interactivo'],
-    iconName: 'game'
+    technologies: ['Unity', 'C#', 'Interactive Development'],
+    iconName: 'game',
+    glowColor: 'rgba(6,182,212,0.6)',
   },
   {
     id: 'heltica',
@@ -27,7 +29,8 @@ export const workExperienceData: ExperienceItem[] = [
     startYear: 'Mar 2022',
     endYear: 'Jun 2022',
     descriptionKey: 'workExperience.items.heltica.description',
-    technologies: ['Soporte IT', 'Windows', 'Hardware'],
-    iconName: 'server'
-  }
+    technologies: ['IT Support', 'Windows', 'Hardware'],
+    iconName: 'server',
+    glowColor: 'rgba(168,85,247,0.6)',
+  },
 ];

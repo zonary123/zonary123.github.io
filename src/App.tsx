@@ -13,7 +13,7 @@ import { Contact } from './sections/Contact';
 
 function App() {
   return (
-    <div className="min-h-screen relative flex flex-col">
+    <div className="min-h-screen relative flex flex-col overflow-x-hidden">
 
 
       <div

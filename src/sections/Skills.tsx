@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { SectionTitle } from '../components/SectionTitle';
 import { GlassCard } from '../components/GlassCard';
+import { SectionWrapper } from '../components/SectionWrapper';
 import { Database, Layout, Server, Settings, Zap } from 'lucide-react';
 import { SkillBadge } from '../components/SkillBadge';
 
@@ -37,29 +38,27 @@ export const Skills = () => {
       title: t('skills.specialties'),
       icon: <Zap className="text-yellow-500 mb-4" size={32} />,
       color: 'rgba(234,179,8,0.6)',
-      skills: ['Programación Asíncrona', 'Optimización de Rendimiento', 'Sistemas Concurrentes']
+      skills: [t('skills.specialty_items.async'), t('skills.specialty_items.performance'), t('skills.specialty_items.concurrent')]
     }
   ];
 
   return (
-    <section id="skills" className="py-24 px-6 relative bg-slate-100/50 dark:bg-dark-800/50">
-      <div className="container mx-auto max-w-6xl">
-        <SectionTitle title={t('skills.title')} />
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skillCategories.map((category, idx) => (
-            <GlassCard key={idx} delay={idx * 0.1} glowColor={category.color} className="flex flex-col h-full hover:-translate-y-2 transition-transform duration-300 border-none overflow-visible">
-              {category.icon}
-              <h3 className="text-xl font-bold mb-4">{category.title}</h3>
-              <div className="flex flex-wrap gap-2 mt-auto">
-                {category.skills.map(skill => (
-                  <SkillBadge key={skill} skill={skill} />
-                ))}
-              </div>
-            </GlassCard>
-          ))}
-        </div>
+    <SectionWrapper id="skills" alt>
+      <SectionTitle title={t('skills.title')} />
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {skillCategories.map((category, idx) => (
+          <GlassCard key={idx} delay={idx * 0.1} glowColor={category.color} className="flex flex-col h-full hover:-translate-y-2 transition-transform duration-300 border-none overflow-visible">
+            {category.icon}
+            <h3 className="text-xl font-bold mb-4">{category.title}</h3>
+            <div className="flex flex-wrap gap-2 mt-auto">
+              {category.skills.map(skill => (
+                <SkillBadge key={skill} skill={skill} />
+              ))}
+            </div>
+          </GlassCard>
+        ))}
       </div>
-    </section>
+    </SectionWrapper>
   );
 };
