@@ -31,7 +31,7 @@ export const Skills = () => {
       title: t('skills.tools'),
       icon: <Settings className="text-slate-500 mb-4" size={32} />,
       color: 'rgba(100,116,139,0.5)',
-      skills: ['Git', 'NPM', 'Docker', 'Kubernetes', 'Linux']
+      skills: ['Git', 'NPM', 'Docker', 'Kubernetes', 'Linux', 'Windows']
     },
     {
       title: t('skills.specialties'),

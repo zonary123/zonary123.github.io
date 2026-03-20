@@ -64,7 +64,7 @@ export const Hero = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 dark:from-primary-600 dark:to-accent-600 rounded-full blur-[80px] opacity-20 group-hover:opacity-40 transition-opacity duration-700 mix-blend-multiply dark:mix-blend-screen" />
           
           <div className="relative w-56 h-56 md:w-80 md:h-80 rounded-full border-4 border-white/20 dark:border-white/10 glass shadow-2xl shadow-primary-500/10 overflow-hidden flex flex-col items-center justify-center bg-slate-100 dark:bg-dark-800">
-            {/* Si alguna vez pones una foto real, reemplaza el icono de abajo por una etiqueta <img src="/foto.jpg" alt="Perfil" className="w-full h-full object-cover" /> */}
+
             <img src={profileImage} alt="Carlos Varas Alonso" className="w-full h-full object-cover" />
           </div>
           <div className="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-accent-500/20 backdrop-blur-md border border-white/20 animate-pulse" />

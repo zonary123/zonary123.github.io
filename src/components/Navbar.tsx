@@ -41,7 +41,6 @@ export const Navbar = () => {
         <div className="flex justify-between items-center w-full">
           <a href="#" className="font-bold text-2xl text-gradient tracking-tighter hover:scale-105 transition-transform">zonary123</a>
         
-          {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-8">
             <div className="flex space-x-6">
               {navLinks.map((link) => (
@@ -61,7 +60,6 @@ export const Navbar = () => {
             </div>
           </div>
 
-          {/* Mobile Nav Toggle */}
           <div className="md:hidden flex items-center space-x-4">
             <button onClick={toggleLanguage} className="p-2">
               <Languages size={20} />
@@ -76,7 +74,6 @@ export const Navbar = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden glass absolute top-[80px] left-4 right-4 rounded-2xl py-6 px-6 flex flex-col space-y-4 shadow-2xl border border-slate-200/50 dark:border-white/10 pointer-events-auto">
           {navLinks.map((link) => (

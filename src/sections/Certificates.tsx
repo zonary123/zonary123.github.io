@@ -9,7 +9,7 @@ export const Certificates = () => {
   const { t } = useTranslation();
 
   const getCertificateGlow = (idx: number) => {
-    const colors = ['rgba(59,130,246,0.6)', 'rgba(234,179,8,0.6)', 'rgba(6,182,212,0.6)']; // Blue, Yellow, Cyan
+    const colors = ['rgba(59,130,246,0.6)', 'rgba(234,179,8,0.6)', 'rgba(6,182,212,0.6)'];
     return colors[idx % colors.length];
   };
 

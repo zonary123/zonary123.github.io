@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { SiJavascript, SiTypescript, SiReact, SiTailwindcss, SiNodedotjs, SiMongodb, SiRedis, SiSpringboot, SiDocker, SiGit, SiMysql, SiPostgresql, SiLinux, SiCplusplus, SiUnity, SiKubernetes } from 'react-icons/si';
 import { FaJava, FaNpm, FaHtml5, FaCss3Alt } from 'react-icons/fa';
-import { TbBrandCSharp } from 'react-icons/tb';
+import { TbBrandCSharp, TbBrandMinecraft } from 'react-icons/tb';
 import { Pickaxe } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { BiWindows } from 'react-icons/bi';
 
-// Función para obtener el color según el skill
 export const getSkillColor = (skill: string) => {
   const colors: Record<string, string> = {
     'HTML': 'text-orange-600 dark:text-orange-400 bg-orange-500/10 border-orange-500/20',
@@ -30,17 +30,17 @@ export const getSkillColor = (skill: string) => {
     'PostgreSQL': 'text-blue-600 dark:text-blue-400 bg-blue-500/10 border-blue-500/20',
     'NPM': 'text-red-500 dark:text-red-400 bg-red-500/10 border-red-500/20',
     'Linux': 'text-yellow-600 dark:text-yellow-500 bg-yellow-500/10 border-yellow-500/20',
+    'Windows': 'text-blue-600 dark:text-blue-400 bg-blue-500/10 border-blue-500/20',
     'Unity': 'text-neutral-600 dark:text-neutral-400 bg-neutral-500/10 border-neutral-500/20',
     'Minecraft': 'text-green-700 dark:text-green-500 bg-green-600/10 border-green-600/20',
     'Minecraft API': 'text-green-700 dark:text-green-500 bg-green-600/10 border-green-600/20',
   };
-  
+
   return colors[skill] || 'text-slate-700 dark:text-slate-300 bg-slate-200 dark:bg-slate-700/50 border-slate-300 dark:border-slate-700';
 };
 
-// Función para obtener el icono según el skill
 export const getSkillIcon = (skill: string) => {
-  switch(skill) {
+  switch (skill) {
     case 'HTML': return <FaHtml5 className="text-lg" />;
     case 'CSS': return <FaCss3Alt className="text-lg" />;
     case 'JavaScript': return <SiJavascript className="text-lg" />;
@@ -62,28 +62,27 @@ export const getSkillIcon = (skill: string) => {
     case 'PostgreSQL': return <SiPostgresql className="text-lg" />;
     case 'NPM': return <FaNpm className="text-lg" />;
     case 'Linux': return <SiLinux className="text-lg" />;
+    case 'Windows': return <BiWindows className="text-lg" />;
     case 'Unity': return <SiUnity className="text-lg" />;
-    case 'Minecraft':
-    case 'Minecraft API': return <Pickaxe size={18} />;
+    case 'Minecraft': return <TbBrandMinecraft className="text-lg" />;
+    case 'Minecraft API': return <TbBrandMinecraft size={18} />;
     default: return null;
   }
 };
 
 
 
-// Componente SkillBadge con tooltip animado
 export const SkillBadge = ({ skill }: { skill: string }) => {
   const { t } = useTranslation();
   const [isHovered, setIsHovered] = useState(false);
-  
-  // Clave de traducción para la descripción (reemplazamos puntos por guiones bajos)
+
   const descriptionKey = `skills.descriptions.${skill.replace(/\./g, '_')}`;
   const description = t(descriptionKey);
   const hasDescription = description !== descriptionKey;
 
   return (
-    <div 
-      className="relative flex items-center"
+    <div
+      className={`relative inline-flex items-center transition-all duration-300 ${isHovered ? 'z-[100]' : 'z-0'}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -94,20 +93,29 @@ export const SkillBadge = ({ skill }: { skill: string }) => {
         {skill}
       </span>
 
-      <AnimatePresence>
-        {isHovered && hasDescription && (
-          <motion.div
-            initial={{ opacity: 0, y: 10, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 5, scale: 0.95 }}
-            transition={{ duration: 0.2 }}
-            className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 sm:w-56 p-3 bg-slate-900 dark:bg-slate-800 text-slate-100 text-[11px] leading-snug rounded-xl shadow-2xl z-50 pointer-events-none text-center border border-white/10"
-          >
-            {description}
-            <div className="absolute top-full left-1/2 -translate-x-1/2 border-6 border-transparent border-t-slate-900 dark:border-t-slate-800" />
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <div className={`absolute bottom-full left-1/2 -translate-x-1/2 mb-3 z-[100] pointer-events-none flex flex-col items-center`}>
+        <AnimatePresence>
+          {isHovered && hasDescription && (
+            <>
+              <motion.div
+                initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 5, scale: 0.95 }}
+                transition={{ duration: 0.2 }}
+                className="w-52 sm:w-60 p-3 bg-slate-900/95 dark:bg-slate-800/95 backdrop-blur-xl text-slate-100 text-[11px] leading-snug rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.5)] text-center border border-white/10"
+              >
+                {description}
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 5 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 2 }}
+                className="border-8 border-transparent border-t-slate-900/95 dark:border-t-slate-800/95 -mt-px"
+              />
+            </>
+          )}
+        </AnimatePresence>
+      </div>
     </div>
   );
 };

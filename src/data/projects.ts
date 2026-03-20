@@ -11,16 +11,36 @@ export interface Project {
   demoUrl?: string;
 }
 
-// export const projectsData: Project[] = [
-//   {
-//     id: 'cobblemon-sync',
-//     title: 'Cobblemon Sync System',
-//     description: 'Sistema avanzado de sincronización de datos de jugadores entre múltiples servidores de Minecraft usando Redis y MongoDB para asegurar consistencia en tiempo real.',
-//     technologies: ['Java', 'Redis', 'MongoDB', 'Minecraft API'],
-//     category: 'minecraft',
-//     githubUrl: '#'
-//   }
-// ];
-
 export const projectsData: Project[] = [
+  {
+    id: 'cobblemonpatches',
+    title: 'CobblemonPatches',
+    description: 'Un mod diseñado para parchear errores y problemas de optimización en Cobblemon.',
+    technologies: ['Java'],
+    category: 'minecraft',
+    githubUrl: 'https://github.com/zonary123/CobblemonPatches'
+  },
+  {
+    id: 'ultrautils',
+    title: 'UltraUtils',
+    description: 'Es mi mod core para mods en minecraft, con muchas funciones útiles.',
+    technologies: ['Java'],
+    category: 'minecraft',
+    githubUrl: 'https://github.com/zonary123/CobbleUtils'
+  },
+  {
+    id: 'wondertrade',
+    title: 'WonderTrade',
+    description: 'Un mod para intercambiar pokemones con otros jugadores.',
+    technologies: ['Java', 'MongoDB'],
+    category: 'minecraft',
+    githubUrl: 'https://github.com/zonary123/WonderTrade'
+  },
+  {
+    id: 'ultrabattlepass',
+    title: 'UltraBattlePass',
+    description: 'Un mod que inserta un sistema de battlepass tipico de juegos como fortnite o apex legends',
+    technologies: ['Java', 'MongoDB'],
+    category: 'minecraft'
+  }
 ];

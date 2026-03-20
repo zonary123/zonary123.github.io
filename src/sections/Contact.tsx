@@ -8,9 +8,9 @@ export const Contact = () => {
   const { t } = useTranslation();
   const [copied, setCopied] = useState(false);
   
-  // Define el correo aquí, ya que no cambia con el idioma
+
   const CONTACT_EMAIL = "carlosvarasalonso10@gmail.com";
-  // Si mailto falla a nivel OS, abrir Gmail Web directamente es una gran alternativa
+
   const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${CONTACT_EMAIL}`;
 
   const handleCopyEmail = () => {

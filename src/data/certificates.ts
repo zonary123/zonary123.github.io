@@ -15,6 +15,6 @@ export const certificatesData: CertificateItem[] = [
 //     titleKey: 'certificates.items.cert1.title',
 //     issuerKey: 'certificates.items.cert1.issuer',
 //     dateKey: 'certificates.items.cert1.date',
-//     url: '#'
+//     url: 'https://github.com/zonary123'
 //   }
 // ];

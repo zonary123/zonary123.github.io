@@ -10,7 +10,7 @@ export const WorkExperience = () => {
   const { t } = useTranslation();
 
   const getExperienceGlow = (idx: number) => {
-    const colors = ['rgba(6,182,212,0.6)', 'rgba(168,85,247,0.6)']; // Cyan, Purple
+    const colors = ['rgba(6,182,212,0.6)', 'rgba(168,85,247,0.6)'];
     return colors[idx % colors.length];
   };
 
@@ -30,7 +30,6 @@ export const WorkExperience = () => {
         <SectionTitle title={t('workExperience.title')} subtitle={t('workExperience.description')} />
         
         <div className="relative mt-16">
-          {/* Línea central del timeline en escritorio */}
           <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-slate-200 dark:bg-slate-700" />
           
           <div className="space-y-12">
@@ -40,7 +39,6 @@ export const WorkExperience = () => {
               <div key={item.id} className={`flex flex-col md:flex-row items-center justify-between w-full relative ${isEven ? 'md:flex-row-reverse' : ''}`}>
                 <div className="md:w-5/12 hidden md:block" />
                 
-                {/* Timeline Icon */}
                 <div className="z-10 flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-3xl md:rounded-full glass shadow-xl shadow-primary-500/20 mb-6 md:mb-0 border border-primary-500/30 group-hover:scale-110 transition-transform">
                   <div className="p-3 bg-gradient-to-br from-primary-500/10 to-accent-500/10 text-primary-500 rounded-2xl md:rounded-full">
                     {getIcon(item.iconName)}

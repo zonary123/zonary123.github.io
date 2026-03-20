@@ -34,8 +34,8 @@ export const formationData: FormationItem[] = [
     bg: 'bg-pink-500/10'
   },
   {
-    id: 'dam', 
-    titleKey: 'formation.items.dam', 
+    id: 'dam',
+    titleKey: 'formation.items.dam',
     institutionKey: 'formation.institutions.dam',
     descriptionKey: 'formation.explanations.dam',
     startYear: '2022',
@@ -45,8 +45,8 @@ export const formationData: FormationItem[] = [
     bg: 'bg-purple-500/10'
   },
   {
-    id: 'smr', 
-    titleKey: 'formation.items.smr', 
+    id: 'smr',
+    titleKey: 'formation.items.smr',
     institutionKey: 'formation.institutions.smr',
     descriptionKey: 'formation.explanations.smr',
     startYear: '2020',

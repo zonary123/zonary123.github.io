@@ -20,10 +20,10 @@ export const Formation = () => {
 
   const getFormationGlow = (iconName: string) => {
     switch(iconName) {
-      case 'shield': return 'rgba(34,197,94,0.6)'; // text-green-500
-      case 'game': return 'rgba(236,72,153,0.6)'; // text-pink-500
-      case 'graduation': return 'rgba(168,85,247,0.6)'; // text-purple-500
-      case 'network': return 'rgba(59,130,246,0.6)'; // text-blue-500
+      case 'shield': return 'rgba(34,197,94,0.6)';
+      case 'game': return 'rgba(236,72,153,0.6)';
+      case 'graduation': return 'rgba(168,85,247,0.6)';
+      case 'network': return 'rgba(59,130,246,0.6)';
       default: return 'rgba(59,130,246,0.6)';
     }
   };
