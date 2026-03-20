@@ -55,22 +55,18 @@ export const Hero = () => {
           </motion.div>
         </div>
 
-        {/* Profile Image / Placeholder */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.8, x: 30 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
           className="flex-shrink-0 relative group"
         >
-          {/* Glowing background behind image softened */}
           <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 dark:from-primary-600 dark:to-accent-600 rounded-full blur-[80px] opacity-20 group-hover:opacity-40 transition-opacity duration-700 mix-blend-multiply dark:mix-blend-screen" />
           
           <div className="relative w-56 h-56 md:w-80 md:h-80 rounded-full border-4 border-white/20 dark:border-white/10 glass shadow-2xl shadow-primary-500/10 overflow-hidden flex flex-col items-center justify-center bg-slate-100 dark:bg-dark-800">
             {/* Si alguna vez pones una foto real, reemplaza el icono de abajo por una etiqueta <img src="/foto.jpg" alt="Perfil" className="w-full h-full object-cover" /> */}
             <img src={profileImage} alt="Carlos Varas Alonso" className="w-full h-full object-cover" />
           </div>
-          
-          {/* Floating graphic decorations */}
           <div className="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-accent-500/20 backdrop-blur-md border border-white/20 animate-pulse" />
           <div className="absolute -bottom-6 -left-6 w-20 h-20 rounded-full bg-primary-500/20 backdrop-blur-md border border-white/20 animate-pulse" style={{ animationDelay: '1s' }} />
         </motion.div>

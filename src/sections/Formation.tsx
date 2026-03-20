@@ -47,11 +47,11 @@ export const Formation = () => {
                   </div>
                 </div>
                 
-                <div className="md:w-5/12 w-full">
+                <div className="md:w-5/12 w-full z-10">
                   <GlassCard 
                     delay={index * 0.1 + 0.2} 
                     glowColor={getFormationGlow(item.iconName)}
-                    className="relative hover:-translate-y-2 transition-transform duration-300 group border-none"
+                    className="relative hover:-translate-y-2 transition-transform duration-300 group overflow-visible border-none"
                   >
                     <span className="inline-block px-3 py-1 mb-3 text-xs font-semibold rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300">
                       {item.startYear} - {item.endYear === 'present' ? t('common.present') : item.endYear}
@@ -60,10 +60,10 @@ export const Formation = () => {
                     <div className="flex items-center gap-2 mb-1">
                       <h3 className="text-lg md:text-xl font-bold">{t(item.titleKey)}</h3>
                       {item.descriptionKey && (
-                        <div className="relative group flex items-center cursor-help">
-                          <HelpCircle size={18} className="text-slate-400 group-hover:text-primary-500 transition-colors" />
+                        <div className="relative group/tooltip flex items-center cursor-help">
+                          <HelpCircle size={18} className="text-slate-400 group-hover/tooltip:text-primary-500 transition-colors" />
                           
-                          <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-[280px] sm:w-[320px] p-4 bg-slate-900 dark:bg-slate-800 text-slate-100 text-sm leading-relaxed rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-20 shadow-2xl pointer-events-none text-center">
+                          <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-[280px] sm:w-[320px] p-4 bg-slate-900 dark:bg-slate-800 text-slate-100 text-sm leading-relaxed rounded-xl opacity-0 invisible group-hover/tooltip:opacity-100 group-hover/tooltip:visible transition-all z-20 shadow-2xl pointer-events-none text-center">
                             {t(item.descriptionKey)}
                             <div className="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-slate-900 dark:border-t-slate-800" />
                           </div>
