@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { SiJavascript, SiTypescript, SiReact, SiTailwindcss, SiNodedotjs, SiMongodb, SiRedis, SiSpringboot, SiDocker, SiGit, SiMysql, SiPostgresql, SiLinux, SiCplusplus, SiUnity, SiKubernetes } from 'react-icons/si';
 import { FaJava, FaNpm, FaHtml5, FaCss3Alt } from 'react-icons/fa';
 import { TbBrandCSharp } from 'react-icons/tb';
 import { Pickaxe } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
+// Función para obtener el color según el skill
 export const getSkillColor = (skill: string) => {
   const colors: Record<string, string> = {
     'HTML': 'text-orange-600 dark:text-orange-400 bg-orange-500/10 border-orange-500/20',
@@ -35,6 +38,7 @@ export const getSkillColor = (skill: string) => {
   return colors[skill] || 'text-slate-700 dark:text-slate-300 bg-slate-200 dark:bg-slate-700/50 border-slate-300 dark:border-slate-700';
 };
 
+// Función para obtener el icono según el skill
 export const getSkillIcon = (skill: string) => {
   switch(skill) {
     case 'HTML': return <FaHtml5 className="text-lg" />;
@@ -65,11 +69,45 @@ export const getSkillIcon = (skill: string) => {
   }
 };
 
+
+
+// Componente SkillBadge con tooltip animado
 export const SkillBadge = ({ skill }: { skill: string }) => {
+  const { t } = useTranslation();
+  const [isHovered, setIsHovered] = useState(false);
+  
+  // Clave de traducción para la descripción (reemplazamos puntos por guiones bajos)
+  const descriptionKey = `skills.descriptions.${skill.replace(/\./g, '_')}`;
+  const description = t(descriptionKey);
+  const hasDescription = description !== descriptionKey;
+
   return (
-    <span className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold border rounded-full transition-colors hover:brightness-110 shadow-sm ${getSkillColor(skill)}`}>
-      {getSkillIcon(skill)}
-      {skill}
-    </span>
+    <div 
+      className="relative flex items-center"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <span
+        className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold border rounded-full transition-all duration-300 hover:brightness-110 shadow-sm cursor-help ${getSkillColor(skill)} ${isHovered ? 'scale-105' : ''}`}
+      >
+        {getSkillIcon(skill)}
+        {skill}
+      </span>
+
+      <AnimatePresence>
+        {isHovered && hasDescription && (
+          <motion.div
+            initial={{ opacity: 0, y: 10, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 5, scale: 0.95 }}
+            transition={{ duration: 0.2 }}
+            className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 sm:w-56 p-3 bg-slate-900 dark:bg-slate-800 text-slate-100 text-[11px] leading-snug rounded-xl shadow-2xl z-50 pointer-events-none text-center border border-white/10"
+          >
+            {description}
+            <div className="absolute top-full left-1/2 -translate-x-1/2 border-6 border-transparent border-t-slate-900 dark:border-t-slate-800" />
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
 };

@@ -25,7 +25,7 @@ export const About = () => {
           <div className="grid gap-6">
             <GlassCard delay={0.3} className="h-full">
               <div className="flex flex-col h-full">
-                <div className="p-4 rounded-xl bg-primary-500/10 text-primary-500 flex items-center gap-3 w-fit mb-4">
+                <div className="p-4 rounded-xl bg-primary-500/10 text-primary-500 flex items-center gap-3 w-full mb-4">
                   <Server size={24} />
                   <h4 className="font-bold text-lg md:text-xl">Backend Architecture</h4>
                 </div>
@@ -35,7 +35,7 @@ export const About = () => {
             
             <GlassCard delay={0.4} className="h-full">
               <div className="flex flex-col h-full">
-                <div className="p-4 rounded-xl bg-accent-500/10 text-accent-500 flex items-center gap-3 w-fit mb-4">
+                <div className="p-4 rounded-xl bg-accent-500/10 text-accent-500 flex items-center gap-3 w-full mb-4">
                   <TerminalSquare size={24} />
                   <h4 className="font-bold text-lg md:text-xl">Performance Focus</h4>
                 </div>
@@ -45,7 +45,7 @@ export const About = () => {
 
             <GlassCard delay={0.5} className="h-full">
               <div className="flex flex-col h-full">
-                <div className="p-4 rounded-xl bg-blue-500/10 text-blue-500 flex items-center gap-3 w-fit mb-4">
+                <div className="p-4 rounded-xl bg-blue-500/10 text-blue-500 flex items-center gap-3 w-full mb-4">
                   <Code2 size={24} />
                   <h4 className="font-bold text-lg md:text-xl">Full Stack Flexibility</h4>
                 </div>

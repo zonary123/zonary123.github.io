@@ -21,7 +21,7 @@ export const GlassCard: React.FC<GlassCardProps> = ({ children, className = '', 
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay }}
-      className={cn("glass-card rounded-2xl p-6 relative overflow-hidden group transition-all duration-500 hover:-translate-y-1", className)}
+      className={cn("glass-card rounded-2xl p-6 relative overflow-hidden group transition-all duration-500 hover:-translate-y-1 hover:z-30", className)}
       style={{
         '--hover-glow': glowColor
       } as React.CSSProperties}

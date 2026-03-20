@@ -82,7 +82,32 @@
     "frontend": "Frontend",
     "databases": "Bases de Datos",
     "tools": "Herramientas y Entonos",
-    "specialties": "Especialidades"
+    "specialties": "Especialidades",
+    "descriptions": {
+      "HTML": "Lenguaje de marcado para estructurar páginas web.",
+      "CSS": "Lenguaje para dar estilo y diseño a páginas web.",
+      "JavaScript": "Lenguaje de programación que permite interacción en la web.",
+      "TypeScript": "Superset de JavaScript que añade tipado estático.",
+      "React": "Biblioteca para construir interfaces de usuario interactivas.",
+      "TailwindCSS": "Framework de CSS para estilos rápidos con clases utilitarias.",
+      "Node_js": "Entorno de ejecución de JavaScript fuera del navegador.",
+      "MongoDB": "Base de datos NoSQL orientada a documentos.",
+      "Redis": "Almacenamiento en memoria para datos rápidos y temporales.",
+      "Java": "Lenguaje de programación orientado a objetos y multiplataforma.",
+      "Spring Boot": "Framework de Java para construir aplicaciones web rápidamente.",
+      "C#": "Lenguaje de programación de Microsoft, usado en aplicaciones y videojuegos.",
+      "C++": "Lenguaje de programación de alto rendimiento.",
+      "Docker": "Plataforma para crear y manejar contenedores de aplicaciones.",
+      "Kubernetes": "Sistema de orquestación de contenedores.",
+      "Git": "Sistema de control de versiones distribuido.",
+      "MySQL": "Sistema de gestión de bases de datos relacional.",
+      "PostgreSQL": "Sistema de gestión de bases de datos relacional avanzado.",
+      "NPM": "Administrador de paquetes para JavaScript y Node.js.",
+      "Linux": "Sistema operativo de código abierto.",
+      "Unity": "Motor de desarrollo de videojuegos multiplataforma.",
+      "Minecraft": "Videojuego de construcción y exploración en mundo abierto.",
+      "Minecraft API": "Herramientas para interactuar programáticamente con Minecraft."
+    }
   },
   "projects": {
     "title": "Proyectos Destacados",
