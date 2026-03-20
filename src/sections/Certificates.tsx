@@ -8,6 +8,11 @@ import { Award, ExternalLink } from 'lucide-react';
 export const Certificates = () => {
   const { t } = useTranslation();
 
+  const getCertificateGlow = (idx: number) => {
+    const colors = ['rgba(59,130,246,0.6)', 'rgba(234,179,8,0.6)', 'rgba(6,182,212,0.6)']; // Blue, Yellow, Cyan
+    return colors[idx % colors.length];
+  };
+
   return (
     <section id="certificates" className="py-24 px-6 relative">
       <div className="container mx-auto max-w-6xl">
@@ -15,7 +20,12 @@ export const Certificates = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
           {certificatesData.map((cert, index) => (
-            <GlassCard key={cert.id} delay={0.2 + index * 0.1} className="flex flex-col h-full hover:border-accent-500/50 transition-colors group">
+            <GlassCard 
+              key={cert.id} 
+              delay={0.2 + index * 0.1} 
+              glowColor={getCertificateGlow(index)}
+              className="flex flex-col h-full hover:border-accent-500/50 transition-all duration-300 group hover:-translate-y-2 border-none"
+            >
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-accent-500/10 text-accent-500 shrink-0 group-hover:scale-110 transition-transform">
                   <Award size={24} />

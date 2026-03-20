@@ -23,6 +23,16 @@ export const Projects = () => {
     ? projectsData 
     : projectsData.filter(p => p.category === filter);
 
+  const getCategoryColor = (cat: string) => {
+    switch(cat) {
+      case 'minecraft': return 'rgba(34,197,94,0.6)'; // Green
+      case 'backend': return 'rgba(59,130,246,0.6)'; // Blue
+      case 'web': return 'rgba(236,72,153,0.6)'; // Pink
+      case 'experiments': return 'rgba(234,179,8,0.6)'; // Yellow
+      default: return 'rgba(59,130,246,0.5)';
+    }
+  };
+
   return (
     <section id="projects" className="py-24 px-6 relative">
       <div className="container mx-auto max-w-6xl">
@@ -57,7 +67,7 @@ export const Projects = () => {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
               >
-                <GlassCard className="h-full flex flex-col hover:-translate-y-2 hover:border-primary-500/50 group transition-all duration-300">
+                <GlassCard glowColor={getCategoryColor(project.category)} className="h-full flex flex-col hover:-translate-y-2 group transition-all duration-300 border-none">
                   <div className="mb-4">
                     <span className="text-xs font-bold uppercase tracking-wider text-primary-500 mb-2 block">
                       {t(`projects.categories.${project.category}`)}

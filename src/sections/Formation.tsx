@@ -18,6 +18,16 @@ export const Formation = () => {
     }
   };
 
+  const getFormationGlow = (iconName: string) => {
+    switch(iconName) {
+      case 'shield': return 'rgba(34,197,94,0.6)'; // text-green-500
+      case 'game': return 'rgba(236,72,153,0.6)'; // text-pink-500
+      case 'graduation': return 'rgba(168,85,247,0.6)'; // text-purple-500
+      case 'network': return 'rgba(59,130,246,0.6)'; // text-blue-500
+      default: return 'rgba(59,130,246,0.6)';
+    }
+  };
+
   return (
     <section id="formation" className="py-24 px-6 relative">
       <div className="container mx-auto max-w-5xl">
@@ -38,7 +48,11 @@ export const Formation = () => {
                 </div>
                 
                 <div className="md:w-5/12 w-full">
-                  <GlassCard delay={index * 0.1 + 0.2} className="relative hover:scale-[1.02] transition-transform">
+                  <GlassCard 
+                    delay={index * 0.1 + 0.2} 
+                    glowColor={getFormationGlow(item.iconName)}
+                    className="relative hover:-translate-y-2 transition-transform duration-300 group border-none"
+                  >
                     <span className="inline-block px-3 py-1 mb-3 text-xs font-semibold rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300">
                       {item.startYear} - {item.endYear === 'present' ? t('common.present') : item.endYear}
                     </span>
