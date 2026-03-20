@@ -1,0 +1,119 @@
+{
+  "common": {
+    "present": "Presente"
+  },
+  "nav": {
+    "about": "Sobre Mí",
+    "formation": "Formación",
+    "workExperience": "Experiencia Laboral",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "experience": "Experiencia Técnica",
+    "certificates": "Certificados",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "role": "Desarrollador Full Stack",
+    "subtitle": "Construyendo sistemas eficientes, optimizando rendimiento y resolviendo problemas complejos.",
+    "cta_projects": "Ver Proyectos",
+    "cta_contact": "Contactar"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "description1": "Soy un desarrollador Full Stack con un fuerte enfoque en backend, especializado en crear sistemas eficientes, optimizados y escalables.",
+    "description2": "Me adapto fácilmente a cualquier parte del stack, desde backend hasta frontend, y me siento cómodo enfrentándome a nuevos retos técnicos. Disfruto automatizando procesos, mejorando el rendimiento de aplicaciones y encontrando soluciones a problemas complejos.",
+    "description3": "Gran parte de mi experiencia proviene del desarrollo de sistemas para entornos exigentes como Minecraft, donde he trabajado con programación asíncrona, bases de datos y optimización en contextos single-thread.",
+    "description4": "Mi objetivo es seguir creciendo como desarrollador, aprendiendo constantemente y construyendo soluciones cada vez más sólidas."
+  },
+  "formation": {
+    "title": "Formación Académica",
+    "description": "Evolucionando desde bases de sistemas hasta áreas avanzadas como videojuegos y ciberseguridad.",
+    "items": {
+      "smr": "SMR (Sistemas Microinformáticos y Redes)",
+      "dam": "DAM (Desarrollo de Aplicaciones Multiplataforma)",
+      "videogames": "Especialización en Videojuegos",
+      "cybersecurity": "Especialización en Ciberseguridad"
+    },
+    "institutions": {
+      "smr": "IES Venancio Blanco",
+      "dam": "IES Venancio Blanco",
+      "videogames": "IES Venancio Blanco",
+      "cybersecurity": "IES Venancio Blanco"
+    },
+    "explanations": {
+      "smr": "Formación centrada en arquitectura de hardware, montaje de equipos, redes locales, servicios de internet y sistemas operativos a bajo nivel.",
+      "dam": "Especialización intensiva enfocada en creación de aplicaciones robustas, programación orientada a objetos (Java, C#) y gestión integral de bases de datos.",
+      "videogames": "Enfoque profundo en desarrollo interactivo, lógica asíncrona en tiempo real utilizando motores gráficos (Unity) y diseño de arquitecturas de software eficientes.",
+      "cybersecurity": "Estudio avanzado de seguridad en redes, hacking ético, bastionado de sistemas críticos y análisis profundo de vulnerabilidades web e infraestructuras."
+    }
+  },
+  "workExperience": {
+    "title": "Experiencia Laboral",
+    "description": "Lugares donde he desarrollado mis habilidades profesionales y prácticas.",
+    "items": {
+      "air_institute": {
+        "role": "Desarrollador Unity en Prácticas",
+        "company": "AIR Institute",
+        "description": "Participación en el desarrollo de simulaciones y proyectos interactivos utilizando el motor gráfico Unity. Implementación de lógicas estructurales y resolución de desafíos técnicos dentro del entorno de desarrollo."
+      },
+      "heltica": {
+        "role": "Soporte Técnico IT en Prácticas",
+        "company": "HELTICA S.L.",
+        "description": "Soporte técnico directo IT. Especializado en diagnóstico y reparación de hardware, sustitución de componentes (discos duros, memorias), montaje de equipos, e instalación y configuración de sistemas operativos Windows y software diverso para usuarios finales."
+      }
+    }
+  },
+  "certificates": {
+    "title": "Certificados",
+    "description": "Certificaciones adicionales y cursos completados.",
+    "view": "Ver Credencial",
+    "items": {
+      "cert1": {
+        "title": "Certificado de Desarrollo Backend Avanzado",
+        "issuer": "Plataforma Educativa Académica",
+        "date": "2024"
+      }
+    }
+  },
+  "skills": {
+    "title": "Habilidades Especializadas",
+    "backend": "Backend y Core",
+    "frontend": "Frontend",
+    "databases": "Bases de Datos",
+    "tools": "Herramientas y Entonos",
+    "specialties": "Especialidades"
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "description": "Proyectos donde aplico desarrollo, optimización y diseño de sistemas enfocados en entornos exigentes.",
+    "categories": {
+      "all": "Todos",
+      "minecraft": "Mods Minecraft",
+      "backend": "Backend",
+      "web": "Web",
+      "experiments": "Experimentos"
+    },
+    "view_source": "Ver Código",
+    "view_demo": "Demo"
+  },
+  "experience": {
+    "title": "Experiencia Técnica",
+    "description": "He desarrollado múltiples mods para Minecraft (especialmente con Cobblemon), donde:",
+    "bullets": [
+      "Implemento sistemas con bases de datos (MongoDB, Redis)",
+      "Uso programación asíncrona para reducir carga en el hilo principal",
+      "Optimizo rendimiento en entornos single-thread como Minecraft",
+      "Diseño sistemas eficientes y escalables"
+    ],
+    "approach_title": "Mi Enfoque",
+    "approach": "Trabajo habitualmente con programación asíncrona y diseño de sistemas eficientes."
+  },
+  "contact": {
+    "title": "¿Hablamos?",
+    "description": "Estoy abierto a nuevas oportunidades, colaboraciones y retos.",
+    "btn": "Enviar Mensaje",
+    "copy_email": "Copiar Email",
+    "copied": "¡Copiado!"
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "common": {
+    "present": "Present"
+  },
+  "nav": {
+    "about": "About Me",
+    "formation": "Education",
+    "workExperience": "Work Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Technical Exp",
+    "certificates": "Certificates",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "role": "Full Stack Developer",
+    "subtitle": "Building efficient systems, optimizing performance, and solving complex problems.",
+    "cta_projects": "View Projects",
+    "cta_contact": "Get in touch"
+  },
+  "about": {
+    "title": "About Me",
+    "description1": "I am a Full Stack developer with a strong focus on the backend, specialized in creating efficient, optimized, and scalable systems.",
+    "description2": "I adapt easily to any part of the stack, from backend to frontend, and I feel comfortable facing new technical challenges.",
+    "description3": "Much of my experience comes from developing systems for demanding environments like Minecraft.",
+    "description4": "My goal is to keep growing as a developer, constantly learning and building increasingly robust solutions."
+  },
+  "formation": {
+    "title": "Education",
+    "description": "Evolving from systems basics to advanced areas such as video games and cybersecurity.",
+    "items": {
+      "smr": "SMR (Microcomputer Systems and Networks)",
+      "dam": "DAM (Multiplatform Application Development)",
+      "videogames": "Video Games Specialization",
+      "cybersecurity": "Cybersecurity Specialization"
+    },
+    "institutions": {
+      "smr": "IES Venancio Blanco",
+      "dam": "IES Venancio Blanco",
+      "videogames": "IES Venancio Blanco",
+      "cybersecurity": "IES Venancio Blanco"
+    },
+    "explanations": {
+      "smr": "Training centered on hardware architecture, equipment assembly, local networks, internet services, and low-level operating systems.",
+      "dam": "Intensive specialization focused on creating robust applications, object-oriented programming (Java, C#), and comprehensive database management.",
+      "videogames": "Deep focus on interactive development, real-time asynchronous logic using graphics engines (Unity), and designing efficient software architectures.",
+      "cybersecurity": "Advanced study of network security, ethical hacking, hardening of critical systems, and in-depth analysis of web and infrastructure vulnerabilities."
+    }
+  },
+  "workExperience": {
+    "title": "Work Experience",
+    "description": "Places where I have developed my professional skills and internships.",
+    "items": {
+      "air_institute": {
+        "role": "Unity Developer Intern",
+        "company": "AIR Institute",
+        "description": "Participation in the development of simulations and interactive projects using the Unity engine. Implementation of structural logic and resolution of technical challenges within the development environment."
+      },
+      "heltica": {
+        "role": "IT Technical Support Intern",
+        "company": "HELTICA S.L.",
+        "description": "Direct IT technical support. Specialized in hardware diagnostics and repair, replacement of components such as hard drives and memory, equipment assembly, and installation and configuration of Windows operating systems and various software for end-users."
+      }
+    }
+  },
+  "certificates": {
+    "title": "Certificates",
+    "description": "Additional certifications and completed courses.",
+    "view": "View Credential",
+    "items": {
+      "cert1": {
+        "title": "Advanced Backend Development Certificate",
+        "issuer": "Academic Platform",
+        "date": "2024"
+      }
+    }
+  },
+  "skills": {
+    "title": "Specialized Skills",
+    "backend": "Backend & Core",
+    "frontend": "Frontend",
+    "databases": "Databases",
+    "tools": "Tools & Environments",
+    "specialties": "Specialties"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "description": "Projects where I apply development, optimization and system design.",
+    "categories": {
+      "all": "All",
+      "minecraft": "Minecraft Mods",
+      "backend": "Backend",
+      "web": "Web",
+      "experiments": "Experiments"
+    },
+    "view_source": "Source",
+    "view_demo": "Demo"
+  },
+  "experience": {
+    "title": "Technical Experience",
+    "description": "I have developed multiple Minecraft mods (especially with Cobblemon):",
+    "bullets": [
+      "Implement systems with databases (MongoDB, Redis)",
+      "Use asynchronous programming to reduce load",
+      "Optimize performance in single-thread environments",
+      "Design efficient systems"
+    ],
+    "approach_title": "My Approach",
+    "approach": "I regularly work with asynchronous programming and efficient system design."
+  },
+  "contact": {
+    "title": "Let's Talk!",
+    "description": "I'm open to new opportunities, collaborations, and challenges.",
+    "btn": "Send Message",
+    "copy_email": "Copy Email",
+    "copied": "Copied!"
+  }
+}
