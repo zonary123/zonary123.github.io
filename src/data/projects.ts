@@ -1,5 +1,12 @@
 export type Category = 'minecraft' | 'backend' | 'web' | 'experiments';
 
+export const CATEGORY_GLOW: Record<string, string> = {
+  minecraft:   'rgba(34,197,94,0.6)',
+  backend:     'rgba(59,130,246,0.6)',
+  web:         'rgba(236,72,153,0.6)',
+  experiments: 'rgba(234,179,8,0.6)',
+};
+
 export interface Project {
   id: string;
   title: string;

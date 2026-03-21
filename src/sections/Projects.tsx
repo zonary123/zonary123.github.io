@@ -4,16 +4,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { SectionTitle } from '../components/SectionTitle';
 import { GlassCard } from '../components/GlassCard';
 import { SectionWrapper } from '../components/SectionWrapper';
-import { projectsData, type Category } from '../data/projects';
+import { projectsData, CATEGORY_GLOW, type Category } from '../data/projects';
 import { ExternalLink, Github } from 'lucide-react';
 import { SkillBadge } from '../components/SkillBadge';
-
-const CATEGORY_GLOW: Record<string, string> = {
-  minecraft:   'rgba(34,197,94,0.6)',
-  backend:     'rgba(59,130,246,0.6)',
-  web:         'rgba(236,72,153,0.6)',
-  experiments: 'rgba(234,179,8,0.6)',
-};
 
 export const Projects = () => {
   const { t } = useTranslation();
