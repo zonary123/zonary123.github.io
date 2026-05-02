@@ -12,11 +12,11 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="py-8 border-t border-[#3e3e42] bg-[#1e1e1e]">
+    <footer className="py-8 border-t border-editor-border bg-editor-bg">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Copyright */}
-          <p className="text-[#858585] text-sm font-mono">
+          <p className="text-editor-muted text-sm font-mono">
             <span className="text-[#6A9955]">//</span> &copy; {currentYear}{' '}
             {PERSONAL.name} ({PERSONAL.alias})
           </p>
@@ -27,7 +27,7 @@ export const Footer = () => {
               href={PERSONAL.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-md hover:bg-[#2a2d2e] text-[#858585] hover:text-[#d4d4d4] transition-colors"
+              className="p-2 rounded-md hover:bg-editor-hover text-editor-muted hover:text-editor-fg transition-colors"
               aria-label="GitHub"
             >
               <Github size={20} />
@@ -36,14 +36,14 @@ export const Footer = () => {
               href={PERSONAL.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-md hover:bg-[#2a2d2e] text-[#858585] hover:text-[#d4d4d4] transition-colors"
+              className="p-2 rounded-md hover:bg-editor-hover text-editor-muted hover:text-editor-fg transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin size={20} />
             </a>
             <a
               href={`mailto:${PERSONAL.email}`}
-              className="p-2 rounded-md hover:bg-[#2a2d2e] text-[#858585] hover:text-[#d4d4d4] transition-colors"
+              className="p-2 rounded-md hover:bg-editor-hover text-editor-muted hover:text-editor-fg transition-colors"
               aria-label="Email"
             >
               <Mail size={20} />

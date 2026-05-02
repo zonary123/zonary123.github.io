@@ -23,6 +23,8 @@ export const Contact = () => {
       <SectionTitle
         title={t('contact.title')}
         subtitle={t('contact.description')}
+        accentColor="#4EC9B0"
+        accentColorTo="#569CD6"
       />
 
       <GlassCard className="max-w-2xl mx-auto mt-8 p-8 md:p-12">
@@ -31,9 +33,9 @@ export const Contact = () => {
             href={PERSONAL.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center gap-2 p-4 rounded-xl hover:bg-editor-hover transition-colors group"
+            className="flex flex-col items-center gap-2 p-4 rounded-xl border border-editor-border hover:bg-editor-hover hover:border-accent-contact/50 transition-all duration-200 group"
           >
-            <div className="p-3 rounded-full bg-editor-sidebar group-hover:bg-accent-contact/10 transition-colors">
+            <div className="p-3 rounded-full bg-editor-active group-hover:bg-accent-contact/10 transition-colors">
               <Github
                 size={28}
                 className="text-editor-fg group-hover:text-accent-contact transition-colors"
@@ -46,9 +48,9 @@ export const Contact = () => {
             href={PERSONAL.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center gap-2 p-4 rounded-xl hover:bg-editor-hover transition-colors group"
+            className="flex flex-col items-center gap-2 p-4 rounded-xl border border-editor-border hover:bg-editor-hover hover:border-accent-formation/50 transition-all duration-200 group"
           >
-            <div className="p-3 rounded-full bg-editor-sidebar group-hover:bg-accent-formation/10 transition-colors">
+            <div className="p-3 rounded-full bg-editor-active group-hover:bg-accent-formation/10 transition-colors">
               <Linkedin
                 size={28}
                 className="text-syntax-blue group-hover:text-accent-formation transition-colors"
@@ -59,9 +61,9 @@ export const Contact = () => {
 
           <button
             onClick={handleCopyEmail}
-            className="flex flex-col items-center gap-2 p-4 rounded-xl hover:bg-editor-hover transition-colors cursor-pointer border-none bg-transparent group"
+            className="flex flex-col items-center gap-2 p-4 rounded-xl border border-editor-border hover:bg-editor-hover hover:border-accent-experience/50 transition-all duration-200 cursor-pointer bg-transparent group"
           >
-            <div className="p-3 rounded-full bg-editor-sidebar group-hover:bg-accent-experience/10 transition-colors">
+            <div className="p-3 rounded-full bg-editor-active group-hover:bg-accent-experience/10 transition-colors">
               <Mail
                 size={28}
                 className="text-syntax-magenta group-hover:text-accent-experience transition-colors"
@@ -76,7 +78,7 @@ export const Contact = () => {
             href={gmailUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-accent-contact to-accent-formation hover:opacity-90 text-white rounded-2xl font-bold text-lg transition-all duration-300 shadow-xl shadow-accent-contact/40 hover:shadow-accent-contact/60 hover:scale-105 w-full sm:w-auto overflow-hidden ring-2 ring-white/20"
+            className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-accent-contact to-accent-formation hover:opacity-90 text-white rounded-2xl font-bold text-lg transition-all duration-300 shadow-xl shadow-accent-contact/40 hover:shadow-accent-contact/60 hover:scale-[1.02] sm:hover:scale-105 w-full sm:w-auto overflow-hidden ring-2 ring-white/20"
           >
             <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
             {t('contact.btn')} <Send size={20} />
@@ -84,7 +86,7 @@ export const Contact = () => {
 
           <button
             onClick={handleCopyEmail}
-            className={`group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 border-2 w-full sm:w-auto hover:scale-105 ${
+            className={`group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 border-2 w-full sm:w-auto hover:scale-[1.02] sm:hover:scale-105 ${
               copied
                 ? 'bg-accent-formation/20 text-accent-formation border-accent-formation ring-2 ring-accent-formation/20'
                 : 'glass text-editor-fg border-accent-contact/30 hover:border-accent-contact hover:bg-accent-contact/10 hover:shadow-lg hover:shadow-accent-contact/20'

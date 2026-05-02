@@ -10,7 +10,11 @@ export const About = () => {
 
   return (
     <SectionWrapper id="about">
-      <SectionTitle title={t('about.title')} />
+      <SectionTitle
+        title={t('about.title')}
+        accentColor="#569CD6"
+        accentColorTo="#4ec9b0"
+      />
 
       <div className="grid md:grid-cols-2 gap-8 items-start">
         {/* Main description card */}
@@ -29,11 +33,11 @@ export const About = () => {
         </GlassCard>
 
         {/* Feature cards - now directly in grid, not nested */}
-        <div className="grid gap-4">
+        <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-1">
           <GlassCard
             delay={0.3}
             glowColor="rgba(86,156,214,0.5)"
-            className="hover:-translate-y-1 transition-transform border-l-4 border-l-accent-about"
+            className="border-l-4 border-l-accent-about"
           >
             <div className="flex items-center gap-3 mb-3">
               <div className="p-3 rounded-xl bg-accent-about/20 ring-2 ring-accent-about/30">
@@ -51,7 +55,7 @@ export const About = () => {
           <GlassCard
             delay={0.4}
             glowColor="rgba(78,201,176,0.5)"
-            className="hover:-translate-y-1 transition-transform border-l-4 border-l-accent-formation"
+            className="border-l-4 border-l-accent-formation"
           >
             <div className="flex items-center gap-3 mb-3">
               <div className="p-3 rounded-xl bg-accent-formation/20 ring-2 ring-accent-formation/30">
@@ -69,7 +73,7 @@ export const About = () => {
           <GlassCard
             delay={0.5}
             glowColor="rgba(220,220,170,0.5)"
-            className="hover:-translate-y-1 transition-transform border-l-4 border-l-accent-skills"
+            className="border-l-4 border-l-accent-skills"
           >
             <div className="flex items-center gap-3 mb-3">
               <div className="p-3 rounded-xl bg-accent-skills/20 ring-2 ring-accent-skills/30">

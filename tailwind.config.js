@@ -35,7 +35,7 @@ export default {
           about: '#569CD6',
           formation: '#4EC9B0',
           experience: '#C586C0',
-          skills: '#DCDCAA',
+          skills: 'var(--accent-skills, #DCDCAA)',
           projects: '#CE9178',
           certificates: '#B267E6',
           contact: '#4EC9B0'

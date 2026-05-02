@@ -11,7 +11,11 @@ export const TechnicalExperience = () => {
 
   return (
     <SectionWrapper id="experience" maxWidth="max-w-5xl">
-      <SectionTitle title={t('experience.title')} />
+      <SectionTitle
+        title={t('experience.title')}
+        accentColor="#569CD6"
+        accentColorTo="#9CDCFE"
+      />
 
       <div className="mt-8">
         <GlassCard delay={0.2}>

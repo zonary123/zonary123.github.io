@@ -5,27 +5,35 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 /* CSS Variables for theming */
 :root {
-  --editor-bg: #f8fafc;
+  --editor-bg: #f0f4f9;
   --editor-sidebar: #ffffff;
-  --editor-active: #f1f5f9;
-  --editor-hover: #e2e8f0;
-  --editor-border: #e2e8f0;
-  --editor-fg: #1e293b;
-  --editor-muted: #64748b;
-  --editor-line: #94a3b8;
+  --editor-active: #e4ecf5;
+  --editor-hover: #d8e4f0;
+  --editor-border: #b8cad9;
+  --editor-fg: #0f172a;
+  --editor-muted: #4a5568;
+  --editor-line: #64748b;
+  --accent-skills: #8a7200;
 }
 
 .dark {
-  --editor-bg: #1e1e1e;
-  --editor-sidebar: #252526;
-  --editor-active: #37373d;
-  --editor-hover: #2a2d2e;
-  --editor-border: #3e3e42;
-  --editor-fg: #d4d4d4;
-  --editor-muted: #858585;
-  --editor-line: #6e7681;
+  --editor-bg: #16181d;
+  --editor-sidebar: #1f232b;
+  --editor-active: #2a303a;
+  --editor-hover: #343c48;
+  --editor-border: #4b5563;
+  --editor-fg: #e5e7eb;
+  --editor-muted: #b2bccb;
+  --editor-line: #8b95a7;
+  --accent-skills: #dcdcaa;
 }
 
 @layer utilities {
@@ -75,7 +83,7 @@
 
   /* IDE Panel Style */
   .ide-panel {
-    @apply border rounded-lg;
+    @apply border rounded-lg shadow-sm;
     border-color: var(--editor-border);
     background-color: var(--editor-sidebar);
   }
@@ -146,7 +154,7 @@
     border-color: rgba(197, 134, 192, 0.3);
   }
   .border-accent-skills {
-    border-color: rgba(220, 220, 170, 0.3);
+    border-color: rgba(220, 220, 170, 0.5);
   }
   .border-accent-projects {
     border-color: rgba(206, 145, 120, 0.3);
@@ -259,16 +267,16 @@ html {
 
 body {
   @apply antialiased min-h-screen;
-  background-color: #f8fafc;
-  color: #1e293b;
+  background-color: var(--editor-bg);
+  color: var(--editor-fg);
   overflow-x: hidden;
   font-feature-settings:
     'liga' 1,
     'calt' 1;
 }
 .dark body {
-  background-color: #1e1e1e;
-  color: #d4d4d4;
+  background-color: var(--editor-bg);
+  color: var(--editor-fg);
 }
 
 /* Custom scrollbar for IDE feel */
@@ -278,25 +286,25 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #f1f5f9;
+  background-color: color-mix(in srgb, var(--editor-bg) 88%, white 12%);
 }
 .dark ::-webkit-scrollbar-track {
-  background-color: #1e1e1e;
+  background-color: var(--editor-bg);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #94a3b8;
+  background-color: var(--editor-line);
   border-radius: 0.25rem;
 }
 .dark ::-webkit-scrollbar-thumb {
-  background-color: #6e7681;
+  background-color: var(--editor-line);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #64748b;
+  background-color: var(--editor-muted);
 }
 .dark ::-webkit-scrollbar-thumb:hover {
-  background-color: #858585;
+  background-color: var(--editor-muted);
 }
 
 /* Selection styling */

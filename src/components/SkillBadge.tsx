@@ -19,12 +19,11 @@ import {
 } from 'react-icons/si';
 import { FaJava, FaNpm, FaHtml5, FaCss3Alt } from 'react-icons/fa';
 import { TbBrandCSharp, TbBrandMinecraft } from 'react-icons/tb';
-import { Pickaxe } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { BiWindows } from 'react-icons/bi';
 
-export const getSkillColor = (skill: string) => {
+const getSkillColor = (skill: string) => {
   const colors: Record<string, string> = {
     HTML: 'text-orange-600 dark:text-orange-400 bg-orange-500/10 border-orange-500/20',
     CSS: 'text-blue-600 dark:text-blue-400 bg-blue-500/10 border-blue-500/20',
@@ -74,7 +73,7 @@ export const getSkillColor = (skill: string) => {
   );
 };
 
-export const getSkillIcon = (skill: string) => {
+const getSkillIcon = (skill: string) => {
   switch (skill) {
     case 'HTML':
       return <FaHtml5 className="text-lg" />;
@@ -133,44 +132,55 @@ export const getSkillIcon = (skill: string) => {
 export const SkillBadge = ({ skill }: { skill: string }) => {
   const { t } = useTranslation();
   const [isHovered, setIsHovered] = useState(false);
+  const [isTooltipOpen, setIsTooltipOpen] = useState(false);
 
-  const descriptionKey = `skills.descriptions.${skill.replace(/\./g, '_')}`;
+  const descriptionKey = `skills.descriptions.${skill.replace(/[.\s#]/g, '_')}`;
   const description = t(descriptionKey);
-  const hasDescription = description !== descriptionKey;
+  const tooltipText = description !== descriptionKey ? description : skill;
+
+  const shouldShowTooltip = isHovered || isTooltipOpen;
 
   return (
     <div
-      className={`relative inline-flex items-center transition-all duration-300 ${isHovered ? 'z-[100]' : 'z-0'}`}
+      className={`relative inline-flex items-center transition-all duration-300 ${shouldShowTooltip ? 'z-[100]' : 'z-0'}`}
       onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseLeave={() => {
+        setIsHovered(false);
+        setIsTooltipOpen(false);
+      }}
     >
-      <span
-        className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs text-label border rounded-full transition-all duration-300 hover:brightness-110 shadow-sm cursor-help ${getSkillColor(skill)} ${isHovered ? 'scale-105' : ''}`}
+      <button
+        type="button"
+        onClick={() => setIsTooltipOpen((prev) => !prev)}
+        onFocus={() => setIsTooltipOpen(true)}
+        onBlur={() => setIsTooltipOpen(false)}
+        className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs text-label border rounded-full transition-all duration-300 hover:brightness-110 shadow-sm cursor-help ${getSkillColor(skill)} ${shouldShowTooltip ? 'scale-105' : ''}`}
       >
         {getSkillIcon(skill)}
         {skill}
-      </span>
+      </button>
 
       <div
         className={`absolute bottom-full left-1/2 -translate-x-1/2 mb-3 z-[100] pointer-events-none flex flex-col items-center`}
       >
         <AnimatePresence>
-          {isHovered && hasDescription && (
+          {shouldShowTooltip && (
             <>
               <motion.div
                 initial={{ opacity: 0, y: 10, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 5, scale: 0.95 }}
                 transition={{ duration: 0.2 }}
-                className="w-52 sm:w-60 p-3 bg-editor-bg/95 backdrop-blur-xl text-editor-fg text-[11px] leading-snug rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.5)] text-center border border-editor-border"
+                className="w-52 sm:w-60 p-3 bg-editor-sidebar/95 backdrop-blur-xl text-editor-fg text-xs leading-snug rounded-xl shadow-[0_10px_30px_rgba(15,23,42,0.2)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.55)] text-center border border-editor-border ring-1 ring-black/5 dark:ring-white/5"
               >
-                {description}
+                {tooltipText}
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 5 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 2 }}
-                className="border-8 border-transparent border-t-editor-bg/95 -mt-px"
+                className="border-8 border-transparent -mt-px"
+                style={{ borderTopColor: 'var(--editor-sidebar)' }}
               />
             </>
           )}

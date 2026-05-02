@@ -37,14 +37,16 @@ const SectionLoader = () => (
         className="w-3 h-3 rounded-full bg-[#4EC9B0] animate-pulse"
         style={{ animationDelay: '0.4s' }}
       />
-      <span className="code-text text-[#858585] ml-2">loading section...</span>
+      <span className="text-code text-editor-muted ml-2">
+        loading section...
+      </span>
     </div>
   </div>
 );
 
 function App() {
   return (
-    <div className="min-h-screen relative flex flex-col overflow-x-hidden bg-slate-50 dark:bg-[#1e1e1e]">
+    <div className="min-h-screen relative flex flex-col overflow-x-hidden bg-editor-bg text-editor-fg">
       <BackgroundEffects />
 
       <Navbar />

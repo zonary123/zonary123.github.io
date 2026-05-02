@@ -15,7 +15,10 @@ export const SectionWrapper: React.FC<SectionWrapperProps> = ({
   className,
 }) => {
   return (
-    <section id={id} className={cn('py-16 px-6 relative', className)}>
+    <section
+      id={id}
+      className={cn('py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative', className)}
+    >
       <div className={cn('container mx-auto', maxWidth)}>{children}</div>
     </section>
   );
