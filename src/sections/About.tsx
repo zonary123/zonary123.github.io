@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { SectionTitle } from '../components/SectionTitle';
 import { GlassCard } from '../components/GlassCard';
 import { SectionWrapper } from '../components/SectionWrapper';
-import { Code2, Server, TerminalSquare } from 'lucide-react';
+import { Database, Zap, Layers } from 'lucide-react';
 
 export const About = () => {
   const { t } = useTranslation();
@@ -12,45 +12,76 @@ export const About = () => {
     <SectionWrapper id="about">
       <SectionTitle title={t('about.title')} />
 
-      <div className="grid md:grid-cols-2 gap-12 items-start">
-        <GlassCard delay={0.2} className="h-full">
-          <div className="space-y-6 text-lg text-slate-700 dark:text-slate-300">
-            <p>{t('about.description1')}</p>
-            <p>{t('about.description2')}</p>
-            <p>{t('about.description3')}</p>
-            <p className="font-medium text-slate-900 dark:text-slate-100">{t('about.description4')}</p>
+      <div className="grid md:grid-cols-2 gap-8 items-start">
+        {/* Main description card */}
+        <GlassCard
+          delay={0.2}
+          className="h-full border-l-4 border-l-accent-about"
+        >
+          <div className="space-y-6 text-base text-editor-fg">
+            <p className="text-body">{t('about.description1')}</p>
+            <p className="text-body">{t('about.description2')}</p>
+            <p className="text-body">{t('about.description3')}</p>
+            <p className="text-body font-medium text-accent-about">
+              {t('about.description4')}
+            </p>
           </div>
         </GlassCard>
 
-        <div className="grid gap-6">
-          <GlassCard delay={0.3} className="h-full">
-            <div className="flex flex-col h-full">
-              <div className="p-4 rounded-xl bg-primary-500/10 text-primary-500 flex items-center gap-3 w-full mb-4">
-                <Server size={24} />
-                <h4 className="font-bold text-lg md:text-xl">{t('about.card_backend_title')}</h4>
+        {/* Feature cards - now directly in grid, not nested */}
+        <div className="grid gap-4">
+          <GlassCard
+            delay={0.3}
+            glowColor="rgba(86,156,214,0.5)"
+            className="hover:-translate-y-1 transition-transform border-l-4 border-l-accent-about"
+          >
+            <div className="flex items-center gap-3 mb-3">
+              <div className="p-3 rounded-xl bg-accent-about/20 ring-2 ring-accent-about/30">
+                <Database className="text-accent-about" size={28} />
               </div>
-              <p className="text-slate-600 dark:text-slate-400 text-sm md:text-base leading-relaxed mt-auto">{t('about.card_backend_desc')}</p>
+              <h3 className="text-heading text-lg text-accent-about">
+                {t('about.card_backend_title')}
+              </h3>
             </div>
+            <p className="text-body text-editor-muted">
+              {t('about.card_backend_desc')}
+            </p>
           </GlassCard>
 
-          <GlassCard delay={0.4} className="h-full">
-            <div className="flex flex-col h-full">
-              <div className="p-4 rounded-xl bg-accent-500/10 text-accent-500 flex items-center gap-3 w-full mb-4">
-                <TerminalSquare size={24} />
-                <h4 className="font-bold text-lg md:text-xl">{t('about.card_performance_title')}</h4>
+          <GlassCard
+            delay={0.4}
+            glowColor="rgba(78,201,176,0.5)"
+            className="hover:-translate-y-1 transition-transform border-l-4 border-l-accent-formation"
+          >
+            <div className="flex items-center gap-3 mb-3">
+              <div className="p-3 rounded-xl bg-accent-formation/20 ring-2 ring-accent-formation/30">
+                <Zap className="text-accent-formation" size={28} />
               </div>
-              <p className="text-slate-600 dark:text-slate-400 text-sm md:text-base leading-relaxed mt-auto">{t('about.card_performance_desc')}</p>
+              <h3 className="text-heading text-lg text-accent-formation">
+                {t('about.card_performance_title')}
+              </h3>
             </div>
+            <p className="text-body text-editor-muted">
+              {t('about.card_performance_desc')}
+            </p>
           </GlassCard>
 
-          <GlassCard delay={0.5} className="h-full">
-            <div className="flex flex-col h-full">
-              <div className="p-4 rounded-xl bg-blue-500/10 text-blue-500 flex items-center gap-3 w-full mb-4">
-                <Code2 size={24} />
-                <h4 className="font-bold text-lg md:text-xl">{t('about.card_fullstack_title')}</h4>
+          <GlassCard
+            delay={0.5}
+            glowColor="rgba(220,220,170,0.5)"
+            className="hover:-translate-y-1 transition-transform border-l-4 border-l-accent-skills"
+          >
+            <div className="flex items-center gap-3 mb-3">
+              <div className="p-3 rounded-xl bg-accent-skills/20 ring-2 ring-accent-skills/30">
+                <Layers className="text-accent-skills" size={28} />
               </div>
-              <p className="text-slate-600 dark:text-slate-400 text-sm md:text-base leading-relaxed mt-auto">{t('about.card_fullstack_desc')}</p>
+              <h3 className="text-heading text-lg text-accent-skills">
+                {t('about.card_fullstack_title')}
+              </h3>
             </div>
+            <p className="text-body text-editor-muted">
+              {t('about.card_fullstack_desc')}
+            </p>
           </GlassCard>
         </div>
       </div>

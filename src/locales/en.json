@@ -24,7 +24,7 @@
     "github_btn": "GitHub"
   },
   "about": {
-    "title": "profile",
+    "title": "Profile",
     "description1": "I am a Full Stack developer with a strong focus on the backend, specialized in creating efficient, optimized, and scalable systems.",
     "description2": "I adapt easily to any part of the stack, from backend to frontend, and I feel comfortable facing new technical challenges. I enjoy automating processes, improving application performance, and finding solutions to complex problems.",
     "description3": "Much of my experience comes from developing systems for demanding environments like Minecraft, where I have worked with asynchronous programming, databases, and single-threaded optimization.",
@@ -37,7 +37,7 @@
     "card_fullstack_desc": "Ability to integrate end-to-end smoothly across the entire stack."
   },
   "formation": {
-    "title": "education",
+    "title": "Education",
     "description": "Evolving from systems basics to advanced areas such as video games and cybersecurity.",
     "items": {
       "smr": "SMR (Microcomputer Systems and Networks)",
@@ -59,7 +59,7 @@
     }
   },
   "workExperience": {
-    "title": "experience",
+    "title": "Experience",
     "description": "Places where I have developed my professional skills and internships.",
     "items": {
       "air_institute": {
@@ -75,7 +75,7 @@
     }
   },
   "certificates": {
-    "title": "certs",
+    "title": "Certificates",
     "description": "Additional certifications and completed courses.",
     "view": "View Credential",
     "items": {
@@ -87,7 +87,7 @@
     }
   },
   "skills": {
-    "title": "stack",
+    "title": "Tech Stack",
     "backend": "Backend & Core",
     "frontend": "Frontend",
     "databases": "Databases",
@@ -128,7 +128,7 @@
     }
   },
   "projects": {
-    "title": "projects",
+    "title": "Projects",
     "description": "Projects where I apply development, optimization and system design.",
     "categories": {
       "all": "All",
@@ -155,7 +155,7 @@
     }
   },
   "experience": {
-    "title": "technical",
+    "title": "Technical Experience",
     "description": "I have developed multiple Minecraft mods (especially with Cobblemon):",
     "bullets": [
       "Implement database-driven systems (MongoDB, Redis)",
@@ -173,7 +173,7 @@
     }
   },
   "contact": {
-    "title": "contact",
+    "title": "Contact",
     "description": "I'm open to new opportunities, collaborations, and challenges.",
     "btn": "Send Message",
     "copy_email": "Copy Email",

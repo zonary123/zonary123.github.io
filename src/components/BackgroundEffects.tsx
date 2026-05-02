@@ -15,10 +15,18 @@ export const BackgroundEffects: React.FC = () => {
         }}
       />
 
-      {/* Single subtle gradient orb - consistent IDE blue */}
+      {/* Colorful gradient orbs - multi-color for vibrancy */}
       <div className="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
-        <div className="absolute top-[-30%] left-[-20%] w-[60%] h-[60%] rounded-full bg-[#569CD6]/[0.03] blur-[200px]" />
-        <div className="absolute bottom-[-30%] right-[-20%] w-[60%] h-[60%] rounded-full bg-[#4EC9B0]/[0.02] blur-[200px]" />
+        {/* Blue orb - top left */}
+        <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-[#569CD6]/[0.08] blur-[150px]" />
+        {/* Cyan orb - bottom right */}
+        <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-[#4EC9B0]/[0.08] blur-[150px]" />
+        {/* Magenta orb - top right */}
+        <div className="absolute top-[10%] right-[-5%] w-[30%] h-[30%] rounded-full bg-[#C586C0]/[0.06] blur-[120px]" />
+        {/* Yellow orb - bottom left */}
+        <div className="absolute bottom-[20%] left-[-5%] w-[25%] h-[25%] rounded-full bg-[#DCDCAA]/[0.05] blur-[100px]" />
+        {/* Orange orb - center top */}
+        <div className="absolute top-[-10%] left-[40%] w-[30%] h-[30%] rounded-full bg-[#CE9178]/[0.05] blur-[120px]" />
       </div>
 
       {/* Grid pattern - subtle */}

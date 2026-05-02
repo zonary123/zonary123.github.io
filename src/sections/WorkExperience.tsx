@@ -17,8 +17,8 @@ export const WorkExperience = () => {
         subtitle={t('workExperience.description')}
       />
 
-      <div className="relative mt-16">
-        <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-slate-200 dark:bg-slate-700" />
+      <div className="relative mt-8">
+        <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-accent-experience via-accent-experience/50 to-transparent" />
 
         <div className="space-y-12">
           {workExperienceData.map((item, index) => {
@@ -30,8 +30,8 @@ export const WorkExperience = () => {
               >
                 <div className="md:w-5/12 hidden md:block" />
 
-                <div className="z-10 flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-3xl md:rounded-full glass shadow-xl shadow-primary-500/20 mb-6 md:mb-0 border border-primary-500/30 group-hover:scale-110 transition-transform">
-                  <div className="p-3 bg-gradient-to-br from-primary-500/10 to-accent-500/10 text-primary-500 rounded-2xl md:rounded-full">
+                <div className="z-10 flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-3xl md:rounded-full glass shadow-xl shadow-accent-experience/20 mb-6 md:mb-0 border-2 border-accent-experience/30 group-hover:scale-110 transition-transform">
+                  <div className="p-3 bg-accent-experience/10 text-accent-experience rounded-2xl md:rounded-full">
                     {getIcon(item.iconName, 28)}
                   </div>
                 </div>
@@ -45,14 +45,14 @@ export const WorkExperience = () => {
                     <div className="flex flex-col mb-4 gap-2">
                       <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
                         <div>
-                          <h3 className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-accent-500">
+                          <h3 className="text-heading text-xl md:text-2xl text-accent-experience">
                             {t(item.roleKey)}
                           </h3>
-                          <h4 className="text-lg font-medium text-slate-700 dark:text-slate-300">
+                          <h4 className="text-heading text-lg text-editor-fg">
                             {t(item.companyKey)}
                           </h4>
                         </div>
-                        <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 whitespace-nowrap h-fit">
+                        <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-accent-experience/10 text-accent-experience whitespace-nowrap h-fit">
                           {item.startYear} -{' '}
                           {item.endYear === 'present'
                             ? t('common.present')
@@ -61,7 +61,7 @@ export const WorkExperience = () => {
                       </div>
                     </div>
 
-                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+                    <p className="text-body text-editor-muted mb-6">
                       {t(item.descriptionKey)}
                     </p>
 

@@ -12,20 +12,23 @@ export const Skills = () => {
   const skillCategories = [
     {
       title: t('skills.backend'),
-      icon: <Server className="text-blue-500 mb-4" size={32} />,
-      color: 'rgba(59,130,246,0.6)',
+      icon: <Server className="text-accent-about mb-4" size={32} />,
+      color: 'rgba(86,156,214,0.5)',
+      border: 'border-l-accent-about',
       skills: ['Java', 'Spring Boot', 'C#', 'Node.js'],
     },
     {
       title: t('skills.databases'),
-      icon: <Database className="text-purple-500 mb-4" size={32} />,
-      color: 'rgba(168,85,247,0.6)',
+      icon: <Database className="text-accent-formation mb-4" size={32} />,
+      color: 'rgba(78,201,176,0.5)',
+      border: 'border-l-accent-formation',
       skills: ['MongoDB', 'MySQL', 'Redis', 'PostgreSQL'],
     },
     {
       title: t('skills.frontend'),
-      icon: <Layout className="text-pink-500 mb-4" size={32} />,
-      color: 'rgba(236,72,153,0.6)',
+      icon: <Layout className="text-accent-projects mb-4" size={32} />,
+      color: 'rgba(206,145,120,0.5)',
+      border: 'border-l-accent-projects',
       skills: [
         'HTML',
         'CSS',
@@ -37,14 +40,16 @@ export const Skills = () => {
     },
     {
       title: t('skills.tools'),
-      icon: <Settings className="text-slate-500 mb-4" size={32} />,
-      color: 'rgba(100,116,139,0.5)',
+      icon: <Settings className="text-editor-muted mb-4" size={32} />,
+      color: 'rgba(133,133,133,0.4)',
+      border: 'border-l-editor-muted',
       skills: ['Git', 'NPM', 'Docker', 'Kubernetes', 'Linux', 'Windows'],
     },
     {
       title: t('skills.specialties'),
-      icon: <Zap className="text-yellow-500 mb-4" size={32} />,
-      color: 'rgba(234,179,8,0.6)',
+      icon: <Zap className="text-accent-skills mb-4" size={32} />,
+      color: 'rgba(220,220,170,0.5)',
+      border: 'border-l-accent-skills',
       skills: [
         t('skills.specialty_items.async'),
         t('skills.specialty_items.performance'),
@@ -63,10 +68,10 @@ export const Skills = () => {
             key={idx}
             delay={idx * 0.1}
             glowColor={category.color}
-            className="flex flex-col h-full hover:-translate-y-2 transition-transform duration-300 border-none overflow-visible"
+            className={`flex flex-col h-full hover:-translate-y-2 transition-transform duration-300 border-l-4 ${category.border} overflow-visible`}
           >
             {category.icon}
-            <h3 className="text-xl font-bold mb-4">{category.title}</h3>
+            <h3 className="text-heading text-xl mb-4">{category.title}</h3>
             <div className="flex flex-wrap gap-2 mt-auto">
               {category.skills.map((skill) => (
                 <SkillBadge key={skill} skill={skill} />

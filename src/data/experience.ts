@@ -20,7 +20,7 @@ export const workExperienceData: ExperienceItem[] = [
     descriptionKey: 'workExperience.items.air_institute.description',
     technologies: ['Unity', 'C#', 'Interactive Development'],
     iconName: 'game',
-    glowColor: 'rgba(6,182,212,0.6)',
+    glowColor: 'rgba(78,201,176,0.6)',
   },
   {
     id: 'heltica',
@@ -31,6 +31,6 @@ export const workExperienceData: ExperienceItem[] = [
     descriptionKey: 'workExperience.items.heltica.description',
     technologies: ['IT Support', 'Windows', 'Hardware'],
     iconName: 'server',
-    glowColor: 'rgba(168,85,247,0.6)',
+    glowColor: 'rgba(197,134,192,0.6)',
   },
 ];

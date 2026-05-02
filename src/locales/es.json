@@ -24,7 +24,7 @@
     "github_btn": "GitHub"
   },
   "about": {
-    "title": "profile",
+    "title": "Perfil",
     "description1": "Soy un desarrollador Full Stack con un fuerte enfoque en backend, especializado en crear sistemas eficientes, optimizados y escalables.",
     "description2": "Me adapto fácilmente a cualquier parte del stack, desde backend hasta frontend, y me siento cómodo enfrentándome a nuevos retos técnicos. Disfruto automatizando procesos, mejorando el rendimiento de aplicaciones y encontrando soluciones a problemas complejos.",
     "description3": "Gran parte de mi experiencia proviene del desarrollo de sistemas para entornos exigentes como Minecraft, donde he trabajado con programación asíncrona, bases de datos y optimización en contextos single-thread.",
@@ -37,7 +37,7 @@
     "card_fullstack_desc": "Capacidad para integrarse end-to-end con fluidez en todo el stack."
   },
   "formation": {
-    "title": "education",
+    "title": "Formación",
     "description": "Evolucionando desde bases de sistemas hasta áreas avanzadas como videojuegos y ciberseguridad.",
     "items": {
       "smr": "SMR (Sistemas Microinformáticos y Redes)",
@@ -59,7 +59,7 @@
     }
   },
   "workExperience": {
-    "title": "experience",
+    "title": "Experiencia",
     "description": "Lugares donde he desarrollado mis habilidades profesionales y prácticas.",
     "items": {
       "air_institute": {
@@ -75,7 +75,7 @@
     }
   },
   "certificates": {
-    "title": "certs",
+    "title": "Certificados",
     "description": "Certificaciones adicionales y cursos completados.",
     "view": "Ver Credencial",
     "items": {
@@ -87,7 +87,7 @@
     }
   },
   "skills": {
-    "title": "stack",
+    "title": "Tech Stack",
     "backend": "Backend y Core",
     "frontend": "Frontend",
     "databases": "Bases de Datos",
@@ -128,7 +128,7 @@
     }
   },
   "projects": {
-    "title": "projects",
+    "title": "Proyectos",
     "description": "Proyectos donde aplico desarrollo, optimización y diseño de sistemas enfocados en entornos exigentes.",
     "categories": {
       "all": "Todos",
@@ -155,7 +155,7 @@
     }
   },
   "experience": {
-    "title": "technical",
+    "title": "Experiencia Técnica",
     "description": "He desarrollado múltiples mods para Minecraft (especialmente con Cobblemon), donde:",
     "bullets": [
       "Implemento sistemas con bases de datos (MongoDB, Redis)",
@@ -173,7 +173,7 @@
     }
   },
   "contact": {
-    "title": "contact",
+    "title": "Contacto",
     "description": "Estoy abierto a nuevas oportunidades, colaboraciones y retos.",
     "btn": "Enviar Mensaje",
     "copy_email": "Copiar Email",

@@ -16,7 +16,8 @@ export default {
           hover: '#2a2d2e',
           border: '#3e3e42',
           fg: '#d4d4d4',
-          muted: '#858585'
+          muted: '#858585',
+          line: '#6e7681'
         },
         // Syntax highlighting colors
         syntax: {
@@ -26,30 +27,29 @@ export default {
           green: '#6A9955',
           blue: '#569CD6',
           orange: '#CE9178',
-          red: '#F44747'
+          red: '#F44747',
+          purple: '#B267E6'
         },
-        // Legacy mappings for compatibility
-        dark: {
-          900: '#1e1e1e',
-          800: '#252526',
-          700: '#2d2d30'
-        },
-        primary: {
-          500: '#569CD6',
-          400: '#4EC9B0'
-        },
+        // Section accent colors
         accent: {
-          500: '#C586C0',
-          400: '#DCDCAA'
+          about: '#569CD6',
+          formation: '#4EC9B0',
+          experience: '#C586C0',
+          skills: '#DCDCAA',
+          projects: '#CE9178',
+          certificates: '#B267E6',
+          contact: '#4EC9B0'
         }
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'Fira Code', 'Consolas', 'monospace'],
+        display: ['JetBrains Mono', 'Fira Code', 'monospace'],
       },
       animation: {
         'cursor-blink': 'cursor-blink 1s step-end infinite',
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'spin-slow': 'spin 20s linear infinite',
       },
       keyframes: {
         'cursor-blink': {

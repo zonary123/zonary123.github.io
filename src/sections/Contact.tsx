@@ -31,28 +31,43 @@ export const Contact = () => {
             href={PERSONAL.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center gap-2 p-4 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+            className="flex flex-col items-center gap-2 p-4 rounded-xl hover:bg-editor-hover transition-colors group"
           >
-            <Github size={32} className="text-slate-700 dark:text-slate-300" />
-            <span className="font-medium text-sm">{t('contact.github')}</span>
+            <div className="p-3 rounded-full bg-editor-sidebar group-hover:bg-accent-contact/10 transition-colors">
+              <Github
+                size={28}
+                className="text-editor-fg group-hover:text-accent-contact transition-colors"
+              />
+            </div>
+            <span className="text-label text-sm">{t('contact.github')}</span>
           </a>
 
           <a
             href={PERSONAL.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center gap-2 p-4 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+            className="flex flex-col items-center gap-2 p-4 rounded-xl hover:bg-editor-hover transition-colors group"
           >
-            <Linkedin size={32} className="text-blue-600" />
-            <span className="font-medium text-sm">{t('contact.linkedin')}</span>
+            <div className="p-3 rounded-full bg-editor-sidebar group-hover:bg-accent-formation/10 transition-colors">
+              <Linkedin
+                size={28}
+                className="text-syntax-blue group-hover:text-accent-formation transition-colors"
+              />
+            </div>
+            <span className="text-label text-sm">{t('contact.linkedin')}</span>
           </a>
 
           <button
             onClick={handleCopyEmail}
-            className="flex flex-col items-center gap-2 p-4 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer border-none bg-transparent"
+            className="flex flex-col items-center gap-2 p-4 rounded-xl hover:bg-editor-hover transition-colors cursor-pointer border-none bg-transparent group"
           >
-            <Mail size={32} className="text-primary-500" />
-            <span className="font-medium text-sm">{t('contact.email')}</span>
+            <div className="p-3 rounded-full bg-editor-sidebar group-hover:bg-accent-experience/10 transition-colors">
+              <Mail
+                size={28}
+                className="text-syntax-magenta group-hover:text-accent-experience transition-colors"
+              />
+            </div>
+            <span className="text-label text-sm">{t('contact.email')}</span>
           </button>
         </div>
 
@@ -61,17 +76,18 @@ export const Contact = () => {
             href={gmailUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary-500 hover:bg-primary-600 text-white rounded-full font-bold text-lg transition-all shadow-lg shadow-primary-500/30 hover:scale-[1.02] w-full sm:w-auto"
+            className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-accent-contact to-accent-formation hover:opacity-90 text-white rounded-2xl font-bold text-lg transition-all duration-300 shadow-xl shadow-accent-contact/40 hover:shadow-accent-contact/60 hover:scale-105 w-full sm:w-auto overflow-hidden ring-2 ring-white/20"
           >
+            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
             {t('contact.btn')} <Send size={20} />
           </a>
 
           <button
             onClick={handleCopyEmail}
-            className={`inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-bold text-lg transition-all border-2 w-full sm:w-auto hover:scale-[1.02] ${
+            className={`group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 border-2 w-full sm:w-auto hover:scale-105 ${
               copied
-                ? 'bg-green-500/10 text-green-600 dark:text-green-500 border-green-500/50'
-                : 'glass text-slate-700 dark:text-slate-300 border-transparent hover:border-slate-300 dark:hover:border-slate-600 hover:bg-white/40 dark:hover:bg-slate-800/60'
+                ? 'bg-accent-formation/20 text-accent-formation border-accent-formation ring-2 ring-accent-formation/20'
+                : 'glass text-editor-fg border-accent-contact/30 hover:border-accent-contact hover:bg-accent-contact/10 hover:shadow-lg hover:shadow-accent-contact/20'
             }`}
           >
             {copied ? (

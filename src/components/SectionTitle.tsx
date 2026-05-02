@@ -23,33 +23,33 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
           transition={{ duration: 0.4 }}
           className="flex items-center justify-center gap-3 mb-4"
         >
-          <div className="h-px w-8 bg-[#3e3e42]" />
-          <div className="p-2.5 rounded-lg bg-[#252526] border border-[#3e3e42]">
-            <Icon size={22} className="text-[#569CD6]" />
+          <div className="h-px w-8 bg-editor-border" />
+          <div className="p-2.5 rounded-lg bg-editor-sidebar border border-editor-border">
+            <Icon size={22} className="text-syntax-blue" />
           </div>
-          <div className="h-px w-8 bg-[#3e3e42]" />
+          <div className="h-px w-8 bg-editor-border" />
         </motion.div>
       )}
 
-      {/* Title - clean and bold */}
+      {/* Title - display font */}
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.1 }}
-        className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3 tracking-tight text-[#d4d4d4]"
+        className="text-display text-3xl md:text-5xl lg:text-6xl mb-3"
       >
-        {title}
+        <span className="text-gradient">{title}</span>
       </motion.h2>
 
-      {/* Subtitle - clean */}
+      {/* Subtitle */}
       {subtitle && (
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-[#858585] max-w-2xl mx-auto text-base md:text-lg"
+          className="text-body text-base md:text-lg text-editor-muted max-w-2xl mx-auto"
         >
           {subtitle}
         </motion.p>

@@ -22,33 +22,27 @@ export const Hero = () => {
           >
             {/* IDE-style greeting */}
             <div className="flex items-center gap-2 mb-4 justify-center md:justify-start">
-              <Terminal size={20} className="text-[#569CD6]" />
-              <span className="code-text text-[#6A9955]">{`// ${t('hero.greeting')}`}</span>
+              <Terminal size={20} className="text-syntax-blue" />
+              <span className="text-code text-syntax-green">{`// ${t('hero.greeting')}`}</span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-4 font-mono">
-              <span className="text-slate-900 dark:text-[#d4d4d4]">
-                {PERSONAL.name}
-              </span>
+            <h1 className="text-display text-5xl md:text-6xl lg:text-7xl mb-4">
+              <span className="text-editor-fg">{PERSONAL.name}</span>
               <br />
               <span className="text-gradient">{PERSONAL.alias}</span>
-              <span className="animate-cursor-blink text-[#569CD6]">_</span>
+              <span className="animate-cursor-blink text-syntax-blue">_</span>
             </h1>
 
-            <h3 className="text-2xl md:text-3xl font-semibold text-slate-700 dark:text-[#858585] font-mono">
-              <span className="code-keyword">const</span>{' '}
-              <span className="code-function">role</span>{' '}
-              <span className="text-[#d4d4d4]">=</span>{' '}
-              <span className="code-string">"{t('hero.role')}"</span>
-              <span className="text-[#d4d4d4]">;</span>
-            </h3>
+            <p className="text-heading text-xl md:text-2xl text-editor-muted">
+              {t('hero.role')}
+            </p>
           </motion.div>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-slate-600 dark:text-[#858585] max-w-2xl leading-relaxed mx-auto md:mx-0"
+            className="text-body text-lg md:text-xl text-editor-muted max-w-2xl mx-auto md:mx-0"
           >
             {t('hero.subtitle')}
           </motion.p>
@@ -59,29 +53,44 @@ export const Hero = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-wrap items-center justify-center md:justify-start gap-4"
           >
+            {/* Primary CTA - Large gradient button */}
             <a
               href="#projects"
-              className="px-6 py-3 rounded-lg bg-[#569CD6] hover:bg-[#4a8bc4] text-white font-medium transition-all flex items-center gap-2 shadow-lg shadow-[#569CD6]/20 glow-blue"
+              className="group relative px-8 py-4 rounded-2xl bg-gradient-to-r from-accent-about via-accent-formation to-accent-about bg-[length:200%_100%] hover:bg-[position:100%_0] text-white font-bold text-lg transition-all duration-500 flex items-center gap-3 shadow-xl shadow-accent-about/40 hover:shadow-accent-about/60 hover:scale-105 ring-2 ring-white/20 overflow-hidden"
             >
-              <span className="font-mono">{t('hero.cta_projects')}</span>
-              <ArrowRight size={18} />
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+              <span className="relative text-label">
+                {t('hero.cta_projects')}
+              </span>
+              <ArrowRight
+                size={20}
+                className="relative group-hover:translate-x-1 transition-transform"
+              />
             </a>
-            <a
-              href={PERSONAL.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 rounded-lg ide-panel font-medium flex items-center gap-2 text-[#d4d4d4] hover:bg-[#2a2d2e] transition-colors border border-[#3e3e42]"
-            >
-              <Github size={20} />
-              <span className="font-mono">{t('hero.github_btn')}</span>
-            </a>
-            <a
-              href="#contact"
-              className="px-6 py-3 rounded-lg ide-panel font-medium flex items-center gap-2 text-[#d4d4d4] hover:bg-[#2a2d2e] transition-colors border border-[#3e3e42]"
-            >
-              <Mail size={20} />
-              <span className="font-mono">{t('hero.cta_contact')}</span>
-            </a>
+
+            {/* Secondary buttons row */}
+            <div className="flex gap-3">
+              <a
+                href={PERSONAL.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group px-5 py-3 rounded-xl bg-editor-sidebar hover:bg-accent-projects/20 border-2 border-accent-projects/40 hover:border-accent-projects font-semibold flex items-center gap-2 text-accent-projects transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-accent-projects/20"
+              >
+                <div className="p-1.5 rounded-lg bg-accent-projects/20 group-hover:bg-accent-projects/30 transition-colors">
+                  <Github size={18} />
+                </div>
+                <span className="text-label">{t('hero.github_btn')}</span>
+              </a>
+              <a
+                href="#contact"
+                className="group px-5 py-3 rounded-xl bg-editor-sidebar hover:bg-accent-contact/20 border-2 border-accent-contact/40 hover:border-accent-contact font-semibold flex items-center gap-2 text-accent-contact transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-accent-contact/20"
+              >
+                <div className="p-1.5 rounded-lg bg-accent-contact/20 group-hover:bg-accent-contact/30 transition-colors">
+                  <Mail size={18} />
+                </div>
+                <span className="text-label">{t('hero.cta_contact')}</span>
+              </a>
+            </div>
           </motion.div>
         </div>
 
@@ -91,27 +100,55 @@ export const Hero = () => {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="flex-shrink-0 relative group"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-[#569CD6] to-[#4EC9B0] rounded-full blur-[80px] opacity-20 group-hover:opacity-40 transition-opacity duration-700" />
+          {/* Animated glow background */}
+          <div className="absolute inset-0 bg-gradient-to-r from-accent-about via-accent-formation to-accent-skills rounded-full blur-[80px] opacity-40 group-hover:opacity-60 transition-opacity duration-700 animate-pulse-slow" />
+          <div className="absolute -inset-4 bg-gradient-to-r from-accent-about/20 via-accent-formation/20 to-accent-skills/20 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-          <div className="relative w-56 h-56 md:w-80 md:h-80 rounded-full border-4 border-[#3e3e42] shadow-2xl overflow-hidden flex flex-col items-center justify-center bg-[#252526]">
+          {/* Rotating ring effect */}
+          <div
+            className="absolute -inset-3 rounded-full border-2 border-dashed border-accent-about/30 animate-spin-slow"
+            style={{ animationDuration: '20s' }}
+          />
+          <div className="absolute -inset-6 rounded-full border border-accent-formation/20" />
+
+          {/* Main profile container */}
+          <div className="relative w-60 h-60 md:w-88 md:h-88 rounded-full border-[6px] border-editor-sidebar shadow-2xl shadow-black/50 overflow-hidden bg-editor-sidebar ring-4 ring-accent-about/20 group-hover:ring-accent-formation/40 transition-all duration-500">
             <img
               src={profileImage}
               alt={PERSONAL.name}
-              width={320}
-              height={320}
-              className="w-full h-full object-cover"
+              width={352}
+              height={352}
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               loading="eager"
               fetchPriority="high"
             />
+            {/* Subtle overlay on hover */}
+            <div className="absolute inset-0 bg-gradient-to-t from-accent-about/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           </div>
 
-          {/* IDE-style status indicators */}
-          <div className="absolute -top-4 -right-4 w-12 h-12 rounded-lg bg-[#252526] border border-[#3e3e42] flex items-center justify-center glow-cyan">
-            <span className="w-3 h-3 rounded-full bg-[#4EC9B0] animate-pulse" />
+          {/* Animated ping indicator */}
+          <div className="absolute top-2 right-2 md:top-4 md:right-4">
+            <span
+              className="absolute inline-flex h-full w-full rounded-full bg-accent-formation opacity-75 animate-ping"
+              style={{ width: '16px', height: '16px' }}
+            />
+            <span className="relative inline-flex w-4 h-4 rounded-full bg-accent-formation ring-4 ring-accent-formation/30" />
           </div>
-          <div className="absolute -bottom-6 -left-6 w-20 h-10 rounded-lg bg-[#252526] border border-[#3e3e42] flex items-center justify-center px-3">
-            <span className="code-text text-[#6A9955]">{t('hero.online')}</span>
+
+          {/* Online badge */}
+          <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 flex items-center gap-2 px-4 py-2 rounded-full bg-editor-sidebar border-2 border-accent-skills shadow-xl shadow-accent-skills/20">
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-skills opacity-75" />
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-accent-skills" />
+            </span>
+            <span className="text-code text-accent-skills font-bold text-sm">
+              {t('hero.online')}
+            </span>
           </div>
+
+          {/* Decorative corner accents */}
+          <div className="absolute -top-2 -left-2 w-8 h-8 border-l-4 border-t-4 border-accent-about rounded-tl-2xl" />
+          <div className="absolute -bottom-2 -right-2 w-8 h-8 border-r-4 border-b-4 border-accent-formation rounded-br-2xl" />
         </motion.div>
       </div>
     </section>
