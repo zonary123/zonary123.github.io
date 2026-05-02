@@ -8,22 +8,54 @@ export default {
   theme: {
     extend: {
       colors: {
+        // IDE/Terminal Theme - VS Code inspired
+        editor: {
+          bg: '#1e1e1e',
+          sidebar: '#252526',
+          active: '#37373d',
+          hover: '#2a2d2e',
+          border: '#3e3e42',
+          fg: '#d4d4d4',
+          muted: '#858585'
+        },
+        // Syntax highlighting colors
+        syntax: {
+          cyan: '#4EC9B0',
+          magenta: '#C586C0',
+          yellow: '#DCDCAA',
+          green: '#6A9955',
+          blue: '#569CD6',
+          orange: '#CE9178',
+          red: '#F44747'
+        },
+        // Legacy mappings for compatibility
         dark: {
-          900: '#0B0F19',
-          800: '#111827',
-          700: '#1F2937'
+          900: '#1e1e1e',
+          800: '#252526',
+          700: '#2d2d30'
         },
         primary: {
-          500: '#3B82F6',
-          400: '#60A5FA'
+          500: '#569CD6',
+          400: '#4EC9B0'
         },
         accent: {
-          500: '#8B5CF6',
-          400: '#A78BFA'
+          500: '#C586C0',
+          400: '#DCDCAA'
         }
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'Fira Code', 'Consolas', 'monospace'],
+      },
+      animation: {
+        'cursor-blink': 'cursor-blink 1s step-end infinite',
+        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
+      keyframes: {
+        'cursor-blink': {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0' },
+        }
       }
     },
   },

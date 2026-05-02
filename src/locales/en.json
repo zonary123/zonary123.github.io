@@ -3,24 +3,28 @@
     "present": "Present"
   },
   "nav": {
-    "about": "About Me",
+    "about": "Profile",
     "formation": "Education",
-    "workExperience": "Work Experience",
-    "skills": "Skills",
+    "workExperience": "Experience",
+    "skills": "Tech Stack",
     "projects": "Projects",
-    "experience": "Experience",
+    "experience": "Tech Exp",
     "certificates": "Certificates",
-    "contact": "Contact"
+    "contact": "Contact",
+    "language": "Language",
+    "theme": "Theme"
   },
   "hero": {
     "greeting": "Hi, I'm",
     "role": "Full Stack Developer",
     "subtitle": "Building efficient systems, optimizing performance, and solving complex problems.",
     "cta_projects": "View Projects",
-    "cta_contact": "Get in touch"
+    "cta_contact": "Get in touch",
+    "online": "online",
+    "github_btn": "GitHub"
   },
   "about": {
-    "title": "About Me",
+    "title": "profile",
     "description1": "I am a Full Stack developer with a strong focus on the backend, specialized in creating efficient, optimized, and scalable systems.",
     "description2": "I adapt easily to any part of the stack, from backend to frontend, and I feel comfortable facing new technical challenges. I enjoy automating processes, improving application performance, and finding solutions to complex problems.",
     "description3": "Much of my experience comes from developing systems for demanding environments like Minecraft, where I have worked with asynchronous programming, databases, and single-threaded optimization.",
@@ -33,7 +37,7 @@
     "card_fullstack_desc": "Ability to integrate end-to-end smoothly across the entire stack."
   },
   "formation": {
-    "title": "Education",
+    "title": "education",
     "description": "Evolving from systems basics to advanced areas such as video games and cybersecurity.",
     "items": {
       "smr": "SMR (Microcomputer Systems and Networks)",
@@ -55,7 +59,7 @@
     }
   },
   "workExperience": {
-    "title": "Work Experience",
+    "title": "experience",
     "description": "Places where I have developed my professional skills and internships.",
     "items": {
       "air_institute": {
@@ -71,7 +75,7 @@
     }
   },
   "certificates": {
-    "title": "Certificates",
+    "title": "certs",
     "description": "Additional certifications and completed courses.",
     "view": "View Credential",
     "items": {
@@ -83,7 +87,7 @@
     }
   },
   "skills": {
-    "title": "Specialized Skills",
+    "title": "stack",
     "backend": "Backend & Core",
     "frontend": "Frontend",
     "databases": "Databases",
@@ -124,7 +128,7 @@
     }
   },
   "projects": {
-    "title": "Featured Projects",
+    "title": "projects",
     "description": "Projects where I apply development, optimization and system design.",
     "categories": {
       "all": "All",
@@ -151,7 +155,7 @@
     }
   },
   "experience": {
-    "title": "Technical Experience",
+    "title": "technical",
     "description": "I have developed multiple Minecraft mods (especially with Cobblemon):",
     "bullets": [
       "Implement database-driven systems (MongoDB, Redis)",
@@ -169,10 +173,22 @@
     }
   },
   "contact": {
-    "title": "Let's Talk!",
+    "title": "contact",
     "description": "I'm open to new opportunities, collaborations, and challenges.",
     "btn": "Send Message",
     "copy_email": "Copy Email",
-    "copied": "Copied!"
+    "copied": "Copied!",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "email": "Email"
+  },
+  "footer": {
+    "export_pdf": "Export PDF"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "switch_to_light": "Switch to Light",
+    "switch_to_dark": "Switch to Dark"
   }
 }

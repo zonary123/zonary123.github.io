@@ -3,24 +3,28 @@
     "present": "Presente"
   },
   "nav": {
-    "about": "Sobre Mí",
-    "formation": "Formación",
-    "workExperience": "Experiencia Laboral",
-    "skills": "Habilidades",
+    "about": "Perfil",
+    "formation": "Estudios",
+    "workExperience": "Experiencia",
+    "skills": "Tech Stack",
     "projects": "Proyectos",
-    "experience": "Experiencia Técnica",
-    "certificates": "Certificados",
-    "contact": "Contacto"
+    "experience": "Exp. Técnica",
+    "certificates": "Certificaciones",
+    "contact": "Contacto",
+    "language": "Idioma",
+    "theme": "Tema"
   },
   "hero": {
     "greeting": "Hola, soy",
     "role": "Desarrollador Full Stack",
     "subtitle": "Construyendo sistemas eficientes, optimizando rendimiento y resolviendo problemas complejos.",
     "cta_projects": "Ver Proyectos",
-    "cta_contact": "Contactar"
+    "cta_contact": "Contactar",
+    "online": "online",
+    "github_btn": "GitHub"
   },
   "about": {
-    "title": "Sobre Mí",
+    "title": "profile",
     "description1": "Soy un desarrollador Full Stack con un fuerte enfoque en backend, especializado en crear sistemas eficientes, optimizados y escalables.",
     "description2": "Me adapto fácilmente a cualquier parte del stack, desde backend hasta frontend, y me siento cómodo enfrentándome a nuevos retos técnicos. Disfruto automatizando procesos, mejorando el rendimiento de aplicaciones y encontrando soluciones a problemas complejos.",
     "description3": "Gran parte de mi experiencia proviene del desarrollo de sistemas para entornos exigentes como Minecraft, donde he trabajado con programación asíncrona, bases de datos y optimización en contextos single-thread.",
@@ -33,7 +37,7 @@
     "card_fullstack_desc": "Capacidad para integrarse end-to-end con fluidez en todo el stack."
   },
   "formation": {
-    "title": "Formación Académica",
+    "title": "education",
     "description": "Evolucionando desde bases de sistemas hasta áreas avanzadas como videojuegos y ciberseguridad.",
     "items": {
       "smr": "SMR (Sistemas Microinformáticos y Redes)",
@@ -55,7 +59,7 @@
     }
   },
   "workExperience": {
-    "title": "Experiencia Laboral",
+    "title": "experience",
     "description": "Lugares donde he desarrollado mis habilidades profesionales y prácticas.",
     "items": {
       "air_institute": {
@@ -71,7 +75,7 @@
     }
   },
   "certificates": {
-    "title": "Certificados",
+    "title": "certs",
     "description": "Certificaciones adicionales y cursos completados.",
     "view": "Ver Credencial",
     "items": {
@@ -83,7 +87,7 @@
     }
   },
   "skills": {
-    "title": "Habilidades Especializadas",
+    "title": "stack",
     "backend": "Backend y Core",
     "frontend": "Frontend",
     "databases": "Bases de Datos",
@@ -124,7 +128,7 @@
     }
   },
   "projects": {
-    "title": "Proyectos Destacados",
+    "title": "projects",
     "description": "Proyectos donde aplico desarrollo, optimización y diseño de sistemas enfocados en entornos exigentes.",
     "categories": {
       "all": "Todos",
@@ -151,7 +155,7 @@
     }
   },
   "experience": {
-    "title": "Experiencia Técnica",
+    "title": "technical",
     "description": "He desarrollado múltiples mods para Minecraft (especialmente con Cobblemon), donde:",
     "bullets": [
       "Implemento sistemas con bases de datos (MongoDB, Redis)",
@@ -169,10 +173,22 @@
     }
   },
   "contact": {
-    "title": "¿Hablamos?",
+    "title": "contact",
     "description": "Estoy abierto a nuevas oportunidades, colaboraciones y retos.",
     "btn": "Enviar Mensaje",
     "copy_email": "Copiar Email",
-    "copied": "¡Copiado!"
+    "copied": "¡Copiado!",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "email": "Email"
+  },
+  "footer": {
+    "export_pdf": "Exportar PDF"
+  },
+  "theme": {
+    "light": "Claro",
+    "dark": "Oscuro",
+    "switch_to_light": "Cambiar a claro",
+    "switch_to_dark": "Cambiar a oscuro"
   }
 }

@@ -8,15 +8,43 @@ import { Formation } from './sections/Formation';
 import { WorkExperience } from './sections/WorkExperience';
 import { Skills } from './sections/Skills';
 
-const Projects = lazy(() => import('./sections/Projects').then(m => ({ default: m.Projects })));
-const TechnicalExperience = lazy(() => import('./sections/TechnicalExperience').then(m => ({ default: m.TechnicalExperience })));
-const Certificates = lazy(() => import('./sections/Certificates').then(m => ({ default: m.Certificates })));
-const Contact = lazy(() => import('./sections/Contact').then(m => ({ default: m.Contact })));
+// Lazy load below-the-fold sections for better LCP
+const Projects = lazy(() =>
+  import('./sections/Projects').then((m) => ({ default: m.Projects })),
+);
+const TechnicalExperience = lazy(() =>
+  import('./sections/TechnicalExperience').then((m) => ({
+    default: m.TechnicalExperience,
+  })),
+);
+const Certificates = lazy(() =>
+  import('./sections/Certificates').then((m) => ({ default: m.Certificates })),
+);
+const Contact = lazy(() =>
+  import('./sections/Contact').then((m) => ({ default: m.Contact })),
+);
+
+// IDE-style loading fallback
+const SectionLoader = () => (
+  <div className="min-h-[40vh] flex items-center justify-center">
+    <div className="flex items-center gap-3 px-6 py-4 rounded-lg ide-panel">
+      <div className="w-3 h-3 rounded-full bg-[#569CD6] animate-pulse" />
+      <div
+        className="w-3 h-3 rounded-full bg-[#C586C0] animate-pulse"
+        style={{ animationDelay: '0.2s' }}
+      />
+      <div
+        className="w-3 h-3 rounded-full bg-[#4EC9B0] animate-pulse"
+        style={{ animationDelay: '0.4s' }}
+      />
+      <span className="code-text text-[#858585] ml-2">loading section...</span>
+    </div>
+  </div>
+);
 
 function App() {
   return (
-    <div className="min-h-screen relative flex flex-col overflow-x-hidden">
-
+    <div className="min-h-screen relative flex flex-col overflow-x-hidden bg-slate-50 dark:bg-[#1e1e1e]">
       <BackgroundEffects />
 
       <Navbar />
@@ -27,11 +55,7 @@ function App() {
         <Formation />
         <WorkExperience />
         <Skills />
-        <Suspense fallback={
-          <div className="min-h-[50vh] flex items-center justify-center">
-            <div className="w-10 h-10 border-4 border-primary-500 border-t-transparent rounded-full animate-spin"></div>
-          </div>
-        }>
+        <Suspense fallback={<SectionLoader />}>
           <Projects />
           <TechnicalExperience />
           <Certificates />

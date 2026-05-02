@@ -1,32 +1,133 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer utilities {
+  /* IDE/Terminal Glass Effects */
   .glass {
-    @apply bg-white/10 dark:bg-[#1e293b]/40 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-lg;
-  }
-  
-  .glass-card {
-    @apply bg-white/50 dark:bg-[#0f172a]/60 backdrop-blur-xl border border-white/20 dark:border-slate-700/50 shadow-xl rounded-2xl;
-  }
-  
-  .glass-hover {
-    @apply hover:bg-white/60 dark:hover:bg-slate-800/60 transition-all duration-300;
+    @apply bg-[#252526]/90 backdrop-blur-md border border-[#3e3e42] shadow-lg;
   }
 
+  .glass-card {
+    @apply bg-[#252526]/95 backdrop-blur-xl border border-[#3e3e42] shadow-xl rounded-lg;
+  }
+
+  .glass-hover {
+    @apply hover:bg-[#2a2d2e] transition-all duration-200;
+  }
+
+  /* Syntax Highlight Gradients */
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600 dark:from-blue-400 dark:to-purple-500;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#569CD6] to-[#4EC9B0];
+  }
+
+  .text-gradient-magenta {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#C586C0] to-[#569CD6];
+  }
+
+  .text-gradient-yellow {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#DCDCAA] to-[#CE9178];
+  }
+
+  /* IDE Panel Style */
+  .ide-panel {
+    @apply border border-[#3e3e42] bg-[#252526] rounded-lg;
+  }
+
+  .ide-border {
+    @apply border border-[#3e3e42];
+  }
+
+  /* Glow Effects */
+  .glow-cyan {
+    box-shadow: 0 0 20px rgba(78, 201, 176, 0.3);
+  }
+
+  .glow-magenta {
+    box-shadow: 0 0 20px rgba(197, 134, 192, 0.3);
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 20px rgba(86, 156, 214, 0.3);
+  }
+
+  /* Code-style text */
+  .code-text {
+    @apply font-mono text-sm;
+  }
+
+  .code-keyword {
+    @apply text-[#C586C0] font-mono;
+  }
+
+  .code-function {
+    @apply text-[#DCDCAA] font-mono;
+  }
+
+  .code-string {
+    @apply text-[#CE9178] font-mono;
+  }
+
+  .code-comment {
+    @apply text-[#6A9955] font-mono;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Respect user motion preferences for framer-motion */
+@media (prefers-reduced-motion: reduce) {
+  .motion-safe {
+    animation: none !important;
+    transform: none !important;
   }
 }
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
-  @apply bg-slate-50 dark:bg-dark-900 text-slate-800 dark:text-slate-200 antialiased transition-colors duration-300 min-h-screen selection:bg-primary-500/30;
+  @apply bg-[#1e1e1e] text-[#d4d4d4] antialiased min-h-screen selection:bg-[#569CD6]/30;
   overflow-x: hidden;
+  font-feature-settings:
+    'liga' 1,
+    'calt' 1;
+}
+
+/* Custom scrollbar for IDE feel */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-[#1e1e1e];
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[#424242] rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-[#4f4f4f];
+}
+
+/* Selection styling */
+::selection {
+  @apply bg-[#264f78] text-white;
 }
