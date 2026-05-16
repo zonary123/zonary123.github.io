@@ -49,8 +49,8 @@ export const Footer = () => {
 
           {/* CV Download */}
           <a
-            href="/CV.pdf"
-            download
+            href="/pdf/CV_CarlosVarasAlonso_ConFoto.pdf"
+            download="CV_CarlosVarasAlonso.pdf"
             className="group flex items-center gap-2 px-6 py-3 rounded-xl bg-accent-projects/10 hover:bg-accent-projects/20 border-2 border-accent-projects/40 hover:border-accent-projects text-accent-projects font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-accent-projects/20"
           >
             <div className="p-1 rounded bg-accent-projects/20 group-hover:bg-accent-projects/30 transition-colors">

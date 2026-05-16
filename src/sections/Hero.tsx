@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Github, Mail, ArrowRight, Terminal } from 'lucide-react';
+import { Github, Mail, ArrowRight, Terminal, Download } from 'lucide-react';
 import profileImage from '../assets/profile.webp';
 import { PERSONAL } from '../data/constants';
 
@@ -69,7 +69,17 @@ export const Hero = () => {
             </a>
 
             {/* Secondary buttons row */}
-            <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 w-full sm:w-auto justify-center md:justify-start">
+              <a
+                href="/pdf/CV_CarlosVarasAlonso_ConFoto.pdf"
+                download="CV_CarlosVarasAlonso.pdf"
+                className="group px-5 py-3 rounded-xl bg-editor-sidebar hover:bg-accent-projects/10 border-2 border-editor-border hover:border-accent-projects font-semibold flex flex-1 sm:flex-none items-center justify-center gap-2 text-editor-fg hover:text-accent-projects transition-all duration-300 hover:scale-[1.02] sm:hover:scale-105 hover:shadow-lg hover:shadow-accent-projects/10"
+              >
+                <div className="p-1.5 rounded-lg bg-editor-bg group-hover:bg-accent-projects/20 transition-colors">
+                  <Download size={18} />
+                </div>
+                <span className="text-label">{t('hero.cv_btn', 'Descargar CV')}</span>
+              </a>
               <a
                 href={PERSONAL.github}
                 target="_blank"

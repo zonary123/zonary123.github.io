@@ -21,7 +21,8 @@
     "cta_projects": "Ver Proyectos",
     "cta_contact": "Contactar",
     "online": "online",
-    "github_btn": "GitHub"
+    "github_btn": "GitHub",
+    "cv_btn": "Descargar CV"
   },
   "about": {
     "title": "Perfil",
