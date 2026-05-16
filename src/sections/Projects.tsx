@@ -33,8 +33,6 @@ export const Projects = () => {
       <SectionTitle
         title={t('projects.title')}
         subtitle={t('projects.description')}
-        accentColor="#CE9178"
-        accentColorTo="#DCDCAA"
       />
 
       <div className="mb-10 sm:mb-12 -mx-1 px-1 overflow-x-auto">
@@ -77,41 +75,46 @@ export const Projects = () => {
                 glowColor={
                   CATEGORY_GLOW[project.category] ?? 'rgba(59,130,246,0.5)'
                 }
-                className="h-full flex flex-col hover:-translate-y-2 group transition-all duration-300 border-l-4 border-l-accent-projects overflow-visible"
+                className="h-full flex flex-col group transition-all duration-500 border-l-4 border-l-accent-projects overflow-visible hover:scale-[1.02] hover:shadow-2xl"
               >
-                <div className="mb-4">
-                  <span className="text-xs font-bold uppercase tracking-wider text-accent-projects mb-2 block">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent-projects/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl pointer-events-none" />
+                
+                <div className="relative mb-4">
+                  <span className="text-xs font-bold uppercase tracking-wider text-accent-projects mb-2 block opacity-80 group-hover:opacity-100 transition-opacity">
                     {t(`projects.categories.${project.category}`)}
                   </span>
-                  <h3 className="text-heading text-2xl mb-3 group-hover:text-accent-projects transition-colors">
+                  <h3 className="text-heading text-2xl mb-3 group-hover:text-accent-projects transition-colors flex items-center justify-between">
                     {project.title}
+                    <div className="w-8 h-8 rounded-full bg-accent-projects/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0">
+                      <ExternalLink size={16} className="text-accent-projects" />
+                    </div>
                   </h3>
-                  <p className="text-body text-sm text-editor-muted">
+                  <p className="text-body text-sm text-editor-muted group-hover:text-editor-fg transition-colors leading-relaxed">
                     {t(`projects.items.${project.id}.description`)}
                   </p>
                 </div>
 
-                <div className="flex flex-wrap gap-2 mb-6 mt-auto pt-4">
+                <div className="relative flex flex-wrap gap-2 mb-6 mt-auto pt-6">
                   {project.technologies.map((tech) => (
                     <SkillBadge key={tech} skill={tech} />
                   ))}
                 </div>
 
-                <div className="flex flex-wrap gap-3 sm:gap-4 pt-4 border-t border-editor-border mt-auto text-editor-muted">
+                <div className="relative flex flex-wrap gap-4 pt-4 border-t border-editor-border/50 mt-auto text-editor-muted">
                   {project.githubUrl && (
                     <a
                       href={project.githubUrl}
-                      className="text-label text-sm flex items-center gap-1 hover:text-accent-projects transition-colors"
+                      className="text-label text-sm flex items-center gap-2 hover:text-accent-projects transition-all hover:translate-x-1"
                     >
-                      <Github size={16} /> {t('projects.view_source')}
+                      <Github size={18} /> {t('projects.view_source')}
                     </a>
                   )}
                   {project.demoUrl && (
                     <a
                       href={project.demoUrl}
-                      className="text-label text-sm flex items-center gap-1 hover:text-accent-projects transition-colors"
+                      className="text-label text-sm flex items-center gap-2 hover:text-accent-projects transition-all hover:translate-x-1"
                     >
-                      <ExternalLink size={16} /> {t('projects.view_demo')}
+                      <ExternalLink size={18} /> {t('projects.view_demo')}
                     </a>
                   )}
                 </div>

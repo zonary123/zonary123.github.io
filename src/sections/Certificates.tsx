@@ -9,19 +9,18 @@ import { Award, ExternalLink } from 'lucide-react';
 export const Certificates = () => {
   const { t } = useTranslation();
 
+  if (certificatesData.length === 0) return null;
+
   return (
     <SectionWrapper id="certificates">
       <SectionTitle
         title={t('certificates.title')}
         subtitle={t('certificates.description')}
-        accentColor="#B267E6"
-        accentColorTo="#C586C0"
       />
 
       <div className="mt-8">
-        {certificatesData.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {certificatesData.map((cert, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {certificatesData.map((cert, index) => (
               <GlassCard
                 key={cert.id}
                 delay={0.2 + index * 0.1}
@@ -60,22 +59,6 @@ export const Certificates = () => {
               </GlassCard>
             ))}
           </div>
-        ) : (
-          <div className="flex flex-col items-center justify-center py-16 gap-4 text-center">
-            <div className="p-4 rounded-full bg-accent-certificates/10 text-accent-certificates">
-              <Award size={36} />
-            </div>
-            <p className="text-heading text-lg">
-              {t('certificates.coming_soon', 'Coming soon')}
-            </p>
-            <p className="text-body text-editor-muted max-w-md">
-              {t(
-                'certificates.coming_soon_desc',
-                'Certificates are being added. Check back later.',
-              )}
-            </p>
-          </div>
-        )}
       </div>
     </SectionWrapper>
   );

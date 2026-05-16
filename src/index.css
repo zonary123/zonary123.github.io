@@ -13,56 +13,79 @@
 
 /* CSS Variables for theming */
 :root {
-  --editor-bg: #f0f4f9;
-  --editor-sidebar: #ffffff;
-  --editor-active: #e4ecf5;
-  --editor-hover: #d8e4f0;
-  --editor-border: #b8cad9;
-  --editor-fg: #0f172a;
-  --editor-muted: #4a5568;
-  --editor-line: #64748b;
-  --accent-skills: #8a7200;
+  --editor-bg: #f7f7f8;
+  --editor-sidebar: #fcfcfd;
+  --editor-active: #f1f1f4;
+  --editor-hover: #f5f5f7;
+  --editor-border: #e2e2e6;
+  --editor-fg: #1c1c1e;
+  --editor-muted: #57575a;
+  --editor-line: #a1a1aa;
+  --accent-about: #0066cc;
+  --accent-formation: #059669;
+  --accent-experience: #7c3aed;
+  --accent-skills: #854d0e;
+  --accent-projects: #9a3412;
+  --accent-certificates: #7c3aed;
+  --accent-contact: #059669;
 }
 
 .dark {
-  --editor-bg: #16181d;
-  --editor-sidebar: #1f232b;
-  --editor-active: #2a303a;
-  --editor-hover: #343c48;
-  --editor-border: #4b5563;
-  --editor-fg: #e5e7eb;
-  --editor-muted: #b2bccb;
-  --editor-line: #8b95a7;
-  --accent-skills: #dcdcaa;
+  --editor-bg: #0f172a;
+  --editor-sidebar: #1e293b;
+  --editor-active: #334155;
+  --editor-hover: #475569;
+  --editor-border: #334155;
+  --editor-fg: #f1f5f9;
+  --editor-muted: #94a3b8;
+  --editor-line: #64748b;
+  --accent-about: #569CD6;
+  --accent-formation: #4EC9B0;
+  --accent-experience: #C586C0;
+  --accent-skills: #DCDCAA;
+  --accent-projects: #CE9178;
+  --accent-certificates: #B267E6;
+  --accent-contact: #4EC9B0;
 }
 
 @layer utilities {
   /* IDE/Terminal Glass Effects */
   .glass {
-    @apply backdrop-blur-md border shadow-lg;
+    @apply backdrop-blur-md border shadow-lg transition-all duration-300;
+    background-color: color-mix(
+      in srgb,
+      var(--editor-sidebar) 80%,
+      transparent
+    );
+    border-color: color-mix(in srgb, var(--editor-border) 40%, transparent);
+  }
+
+  .glass-card {
+    @apply backdrop-blur-xl border shadow-xl rounded-2xl transition-all duration-500;
     background-color: color-mix(
       in srgb,
       var(--editor-sidebar) 90%,
       transparent
     );
-    border-color: var(--editor-border);
+    border-color: color-mix(in srgb, var(--editor-border) 50%, transparent);
   }
 
-  .glass-card {
-    @apply backdrop-blur-xl border shadow-xl rounded-lg;
+  .glass-card:hover {
+    @apply shadow-2xl;
+    border-color: color-mix(in srgb, var(--editor-border) 80%, transparent);
     background-color: color-mix(
       in srgb,
       var(--editor-sidebar) 95%,
       transparent
     );
-    border-color: var(--editor-border);
   }
 
   .glass-hover {
-    @apply transition-all duration-200;
+    @apply transition-all duration-300;
   }
   .glass-hover:hover {
     background-color: var(--editor-hover);
+    transform: translateY(-2px);
   }
 
   /* Syntax Highlight Gradients */
@@ -237,6 +260,14 @@
   .code-comment {
     color: #6a9955;
     font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  }
+  /* Custom pulse for timeline */
+  @keyframes pulse-glow {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.2); opacity: 0; }
+  }
+  .animate-pulse-glow {
+    animation: pulse-glow 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 }
 

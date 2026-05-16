@@ -74,18 +74,18 @@ export const Hero = () => {
                 href={PERSONAL.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group px-5 py-3 rounded-xl bg-editor-sidebar hover:bg-accent-projects/20 border-2 border-accent-projects/40 hover:border-accent-projects font-semibold flex flex-1 sm:flex-none items-center justify-center gap-2 text-accent-projects transition-all duration-300 hover:scale-[1.02] sm:hover:scale-105 hover:shadow-lg hover:shadow-accent-projects/20"
+                className="group px-5 py-3 rounded-xl bg-editor-sidebar hover:bg-syntax-blue/10 border-2 border-editor-border hover:border-syntax-blue font-semibold flex flex-1 sm:flex-none items-center justify-center gap-2 text-editor-fg hover:text-syntax-blue transition-all duration-300 hover:scale-[1.02] sm:hover:scale-105 hover:shadow-lg hover:shadow-syntax-blue/10"
               >
-                <div className="p-1.5 rounded-lg bg-accent-projects/20 group-hover:bg-accent-projects/30 transition-colors">
+                <div className="p-1.5 rounded-lg bg-editor-bg group-hover:bg-syntax-blue/20 transition-colors">
                   <Github size={18} />
                 </div>
                 <span className="text-label">{t('hero.github_btn')}</span>
               </a>
               <a
                 href="#contact"
-                className="group px-5 py-3 rounded-xl bg-editor-sidebar hover:bg-accent-contact/20 border-2 border-accent-contact/40 hover:border-accent-contact font-semibold flex flex-1 sm:flex-none items-center justify-center gap-2 text-accent-contact transition-all duration-300 hover:scale-[1.02] sm:hover:scale-105 hover:shadow-lg hover:shadow-accent-contact/20"
+                className="group px-5 py-3 rounded-xl bg-editor-sidebar hover:bg-syntax-green/10 border-2 border-editor-border hover:border-syntax-green font-semibold flex flex-1 sm:flex-none items-center justify-center gap-2 text-editor-fg hover:text-syntax-green transition-all duration-300 hover:scale-[1.02] sm:hover:scale-105 hover:shadow-lg hover:shadow-syntax-green/10"
               >
-                <div className="p-1.5 rounded-lg bg-accent-contact/20 group-hover:bg-accent-contact/30 transition-colors">
+                <div className="p-1.5 rounded-lg bg-editor-bg group-hover:bg-syntax-green/20 transition-colors">
                   <Mail size={18} />
                 </div>
                 <span className="text-label">{t('hero.cta_contact')}</span>

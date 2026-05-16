@@ -183,7 +183,7 @@
     "email": "Email"
   },
   "footer": {
-    "export_pdf": "Export PDF"
+    "download_cv": "Download CV"
   },
   "theme": {
     "light": "Light",

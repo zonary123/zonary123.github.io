@@ -22,6 +22,7 @@ import { TbBrandCSharp, TbBrandMinecraft } from 'react-icons/tb';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { BiWindows } from 'react-icons/bi';
+import { Zap, Timer, Workflow } from 'lucide-react';
 
 const getSkillColor = (skill: string) => {
   const colors: Record<string, string> = {
@@ -66,6 +67,18 @@ const getSkillColor = (skill: string) => {
       'text-green-700 dark:text-green-500 bg-green-600/10 border-green-600/20',
     'Minecraft API':
       'text-green-700 dark:text-green-500 bg-green-600/10 border-green-600/20',
+    'Programación Asíncrona':
+      'text-cyan-600 dark:text-cyan-400 bg-cyan-500/10 border-cyan-500/20',
+    'Asynchronous Programming':
+      'text-cyan-600 dark:text-cyan-400 bg-cyan-500/10 border-cyan-500/20',
+    'Optimización de Rendimiento':
+      'text-amber-600 dark:text-amber-400 bg-amber-500/10 border-amber-500/20',
+    'Performance Optimization':
+      'text-amber-600 dark:text-amber-400 bg-amber-500/10 border-amber-500/20',
+    'Sistemas Concurrentes':
+      'text-purple-600 dark:text-purple-400 bg-purple-500/10 border-purple-500/20',
+    'Concurrent Systems':
+      'text-purple-600 dark:text-purple-400 bg-purple-500/10 border-purple-500/20',
   };
 
   return (
@@ -124,6 +137,15 @@ const getSkillIcon = (skill: string) => {
       return <TbBrandMinecraft className="text-lg" />;
     case 'Minecraft API':
       return <TbBrandMinecraft size={18} />;
+    case 'Programación Asíncrona':
+    case 'Asynchronous Programming':
+      return <Timer size={16} />;
+    case 'Optimización de Rendimiento':
+    case 'Performance Optimization':
+      return <Zap size={16} />;
+    case 'Sistemas Concurrentes':
+    case 'Concurrent Systems':
+      return <Workflow size={16} />;
     default:
       return null;
   }

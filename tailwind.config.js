@@ -10,14 +10,14 @@ export default {
       colors: {
         // IDE/Terminal Theme - VS Code inspired
         editor: {
-          bg: '#1e1e1e',
-          sidebar: '#252526',
-          active: '#37373d',
-          hover: '#2a2d2e',
-          border: '#3e3e42',
-          fg: '#d4d4d4',
-          muted: '#858585',
-          line: '#6e7681'
+          bg: 'var(--editor-bg)',
+          sidebar: 'var(--editor-sidebar)',
+          active: 'var(--editor-active)',
+          hover: 'var(--editor-hover)',
+          border: 'var(--editor-border)',
+          fg: 'var(--editor-fg)',
+          muted: 'var(--editor-muted)',
+          line: 'var(--editor-line)'
         },
         // Syntax highlighting colors
         syntax: {
@@ -32,13 +32,13 @@ export default {
         },
         // Section accent colors
         accent: {
-          about: '#569CD6',
-          formation: '#4EC9B0',
-          experience: '#C586C0',
+          about: 'var(--accent-about, #569CD6)',
+          formation: 'var(--accent-formation, #4EC9B0)',
+          experience: 'var(--accent-experience, #C586C0)',
           skills: 'var(--accent-skills, #DCDCAA)',
-          projects: '#CE9178',
-          certificates: '#B267E6',
-          contact: '#4EC9B0'
+          projects: 'var(--accent-projects, #CE9178)',
+          certificates: 'var(--accent-certificates, #B267E6)',
+          contact: 'var(--accent-contact, #4EC9B0)'
         }
       },
       fontFamily: {

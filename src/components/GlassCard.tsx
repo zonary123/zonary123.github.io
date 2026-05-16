@@ -37,8 +37,7 @@ export const GlassCard: React.FC<GlassCardProps> = ({
         className,
       )}
     >
-      {/* IDE panel border */}
-      <div className="absolute inset-0 border border-editor-border rounded-lg pointer-events-none group-hover:opacity-0 transition-opacity duration-300" />
+      {/* IDE panel border - removed redundant div */}
       <div
         className="absolute inset-0 border-2 rounded-lg pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         style={{

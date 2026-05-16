@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Github, Linkedin, Mail, Send, Copy, Check } from 'lucide-react';
+import { Github as GithubIcon, Linkedin as LinkedinIcon, Mail, Send, Copy, Check } from 'lucide-react';
 import { SectionTitle } from '../components/SectionTitle';
 import { GlassCard } from '../components/GlassCard';
 import { SectionWrapper } from '../components/SectionWrapper';
@@ -23,8 +23,6 @@ export const Contact = () => {
       <SectionTitle
         title={t('contact.title')}
         subtitle={t('contact.description')}
-        accentColor="#4EC9B0"
-        accentColorTo="#569CD6"
       />
 
       <GlassCard className="max-w-2xl mx-auto mt-8 p-8 md:p-12">
@@ -36,7 +34,7 @@ export const Contact = () => {
             className="flex flex-col items-center gap-2 p-4 rounded-xl border border-editor-border hover:bg-editor-hover hover:border-accent-contact/50 transition-all duration-200 group"
           >
             <div className="p-3 rounded-full bg-editor-active group-hover:bg-accent-contact/10 transition-colors">
-              <Github
+              <GithubIcon
                 size={28}
                 className="text-editor-fg group-hover:text-accent-contact transition-colors"
               />
@@ -51,7 +49,7 @@ export const Contact = () => {
             className="flex flex-col items-center gap-2 p-4 rounded-xl border border-editor-border hover:bg-editor-hover hover:border-accent-formation/50 transition-all duration-200 group"
           >
             <div className="p-3 rounded-full bg-editor-active group-hover:bg-accent-formation/10 transition-colors">
-              <Linkedin
+              <LinkedinIcon
                 size={28}
                 className="text-syntax-blue group-hover:text-accent-formation transition-colors"
               />

@@ -12,8 +12,6 @@ export const About = () => {
     <SectionWrapper id="about">
       <SectionTitle
         title={t('about.title')}
-        accentColor="#569CD6"
-        accentColorTo="#4ec9b0"
       />
 
       <div className="grid md:grid-cols-2 gap-8 items-start">
@@ -36,54 +34,54 @@ export const About = () => {
         <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-1">
           <GlassCard
             delay={0.3}
-            glowColor="rgba(86,156,214,0.5)"
-            className="border-l-4 border-l-accent-about"
+            glowColor="rgba(86,156,214,0.4)"
+            className="border-l-4 border-l-accent-about group"
           >
-            <div className="flex items-center gap-3 mb-3">
-              <div className="p-3 rounded-xl bg-accent-about/20 ring-2 ring-accent-about/30">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="p-3 rounded-2xl bg-accent-about/10 ring-1 ring-accent-about/30 group-hover:bg-accent-about/20 transition-colors">
                 <Database className="text-accent-about" size={28} />
               </div>
-              <h3 className="text-heading text-lg text-accent-about">
+              <h3 className="text-heading text-xl text-accent-about">
                 {t('about.card_backend_title')}
               </h3>
             </div>
-            <p className="text-body text-editor-muted">
+            <p className="text-body text-editor-fg">
               {t('about.card_backend_desc')}
             </p>
           </GlassCard>
 
           <GlassCard
             delay={0.4}
-            glowColor="rgba(78,201,176,0.5)"
-            className="border-l-4 border-l-accent-formation"
+            glowColor="rgba(78,201,176,0.4)"
+            className="border-l-4 border-l-accent-formation group"
           >
-            <div className="flex items-center gap-3 mb-3">
-              <div className="p-3 rounded-xl bg-accent-formation/20 ring-2 ring-accent-formation/30">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="p-3 rounded-2xl bg-accent-formation/10 ring-1 ring-accent-formation/30 group-hover:bg-accent-formation/20 transition-colors">
                 <Zap className="text-accent-formation" size={28} />
               </div>
-              <h3 className="text-heading text-lg text-accent-formation">
+              <h3 className="text-heading text-xl text-accent-formation">
                 {t('about.card_performance_title')}
               </h3>
             </div>
-            <p className="text-body text-editor-muted">
+            <p className="text-body text-editor-fg">
               {t('about.card_performance_desc')}
             </p>
           </GlassCard>
 
           <GlassCard
             delay={0.5}
-            glowColor="rgba(220,220,170,0.5)"
-            className="border-l-4 border-l-accent-skills"
+            glowColor="rgba(220,220,170,0.4)"
+            className="border-l-4 border-l-accent-skills group"
           >
-            <div className="flex items-center gap-3 mb-3">
-              <div className="p-3 rounded-xl bg-accent-skills/20 ring-2 ring-accent-skills/30">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="p-3 rounded-2xl bg-accent-skills/10 ring-1 ring-accent-skills/30 group-hover:bg-accent-skills/20 transition-colors">
                 <Layers className="text-accent-skills" size={28} />
               </div>
-              <h3 className="text-heading text-lg text-accent-skills">
+              <h3 className="text-heading text-xl text-accent-skills">
                 {t('about.card_fullstack_title')}
               </h3>
             </div>
-            <p className="text-body text-editor-muted">
+            <p className="text-body text-editor-fg">
               {t('about.card_fullstack_desc')}
             </p>
           </GlassCard>

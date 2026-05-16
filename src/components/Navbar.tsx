@@ -58,9 +58,9 @@ export const Navbar = () => {
             href="#home"
             className="font-bold text-xl text-gradient tracking-tighter hover:scale-105 transition-transform flex items-center gap-2 font-mono"
           >
-            <Terminal size={20} className="text-[#569CD6]" />
+            <Terminal size={20} className="text-accent-about" />
             <span className="w-px h-4 bg-editor-border" />
-            <span>zonary123</span>
+            <span className="text-editor-fg">zonary123</span>
           </a>
 
           <div className="hidden md:flex items-center space-x-4">
@@ -106,7 +106,7 @@ export const Navbar = () => {
                           {lang.label}
                         </span>
                         {currentLang.code === lang.code && (
-                          <Check size={14} className="ml-auto text-[#4EC9B0]" />
+                          <Check size={14} className="ml-auto text-accent-formation" />
                         )}
                       </button>
                     ))}
@@ -125,9 +125,9 @@ export const Navbar = () => {
                 }
               >
                 {theme === 'dark' ? (
-                  <Sun size={18} className="text-[#DCDCAA]" />
+                  <Sun size={18} className="text-accent-skills" />
                 ) : (
-                  <Moon size={18} className="text-[#569CD6]" />
+                  <Moon size={18} className="text-accent-about" />
                 )}
               </button>
             </div>

@@ -183,7 +183,7 @@
     "email": "Email"
   },
   "footer": {
-    "export_pdf": "Exportar PDF"
+    "download_cv": "Descargar CV"
   },
   "theme": {
     "light": "Claro",
